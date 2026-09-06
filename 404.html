@@ -151,11 +151,63 @@
         </nav>
 
         <div class="header-actions">
+
           <a href="plan-your-trek.html" class="btn btn-primary btn-sm">Plan Your Trek</a>
+          <button class="mobile-nav-toggle" id="mobileMenuOpen" aria-label="Open Navigation Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <div class="mobile-drawer" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-title-wrap">
+        <span class="brand-name">ABC TREK</span>
+        <span class="brand-tagline">IN NEPAL</span>
+      </div>
+      <button class="mobile-drawer-close" id="mobileMenuClose" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-drawer-links">
+        <li><a href="index.html" class="mobile-nav-link"><span>Home</span></a></li>
+        <li>
+          <button class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+            <span>Annapurna Treks</span>
+            <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <ul class="mobile-accordion-panel">
+            <li><a href="treks/annapurna-base-camp-classic-10-days.html" class="mobile-sub-link"><span>10-Day Sanctuary (Flagship)</span></a></li>
+            <li><a href="treks/8-days-annapurna-base-camp-trek.html" class="mobile-sub-link"><span>8 Days ABC Trek</span></a></li>
+            <li><a href="treks/short-annapurna-base-camp-trek.html" class="mobile-sub-link"><span>Short ABC Trek</span></a></li>
+            <li><a href="treks/annapurna-circuit-trek.html" class="mobile-sub-link"><span>Annapurna Circuit Trek</span></a></li>
+            <li><a href="treks/14-days-annapurna-circuit-trek.html" class="mobile-sub-link"><span>14 Days Circuit Trek</span></a></li>
+            <li><a href="treks/ghorepani-poon-hill-trek.html" class="mobile-sub-link"><span>Ghorepani Poon Hill</span></a></li>
+            <li><a href="treks/3-days-poon-hill-trek.html" class="mobile-sub-link"><span>3 Days Poon Hill</span></a></li>
+            <li><a href="treks/mardi-himal-trek.html" class="mobile-sub-link"><span>Mardi Himal Ridge</span></a></li>
+            <li><a href="treks/nar-phu-valley-trek.html" class="mobile-sub-link"><span>Nar Phu Valley</span></a></li>
+            <li><a href="treks/khopra-ridge-trek.html" class="mobile-sub-link"><span>Khopra Ridge</span></a></li>
+            <li><a href="treks/index.html" class="mobile-sub-link" style="font-weight: 700; color: var(--color-accent);"><span>View All 18 Treks &rarr;</span></a></li>
+          </ul>
+        </li>
+        <li><a href="guide/annapurna-base-camp-trek-ultimate-guide.html" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
+        <li><a href="safety-ethics/high-altitude-medical-protocols-evacuation.html" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
+        <li><a href="company/about-us.html" class="mobile-nav-link"><span>About Our Specialists</span></a></li>
+        <li><a href="company/contact.html" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="plan-your-trek.html" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Plan Your Trek</a>
+      <a href="https://wa.me/9779818188459" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center; color: #22C55E; border-color: #22C55E;">WhatsApp Concierge</a>
+    </div>
+  </div>
 
   <!-- Error Section -->
   <main class="error-hero">
@@ -283,5 +335,6 @@
     </div>
   </footer>
 
+  <script src="js/nav.js" defer></script>
 </body>
 </html>
