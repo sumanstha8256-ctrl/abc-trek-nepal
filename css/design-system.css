@@ -136,9 +136,9 @@
   --z-base: 1;
   --z-sticky: 100;
   --z-header: 500;
-  --z-mobile-drawer: 600;
   --z-modal-backdrop: 900;
-  --z-modal: 1000;
+  --z-mobile-drawer: 1000;
+  --z-modal: 1100;
 }
 
 /* --- 2. CSS RESET & EDITORIAL BASE DEFAULTS --- */
@@ -152,6 +152,10 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -163,6 +167,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
 /* Typography Defaults */
@@ -257,6 +265,15 @@ img, picture, video, canvas, svg {
   margin-right: auto;
   padding-left: var(--space-24);
   padding-right: var(--space-24);
+}
+
+@media (max-width: 640px) {
+  .container,
+  .container-narrow,
+  .container-reading {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 /* Section Spacing System */

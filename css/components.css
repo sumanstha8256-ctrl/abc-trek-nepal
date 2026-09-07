@@ -380,19 +380,30 @@
    -------------------------------------------------------------------------- */
 .mobile-nav-toggle {
   display: none;
-  background: var(--color-surface-pure);
-  border: 1px solid var(--color-border-medium);
+  width: 42px;
+  height: 42px;
+  background-color: var(--color-surface-pure);
+  border: 1.5px solid var(--color-brand-dark);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  padding: 8px 10px;
-  color: var(--color-brand-dark);
+  padding: 0;
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  gap: var(--space-6);
-  font-family: var(--font-sans);
-  font-size: var(--text-caption);
-  font-weight: 700;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--color-brand-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   transition: all var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 25;
+  pointer-events: auto;
+}
+
+.mobile-nav-toggle * {
+  pointer-events: none;
 }
 
 .mobile-nav-toggle:hover,
@@ -402,20 +413,32 @@
   color: var(--color-accent);
 }
 
+.mobile-nav-toggle .hamburger-bar {
+  display: block;
+  width: 20px;
+  height: 2.2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
 .mobile-nav-toggle svg {
   display: block;
   width: 22px;
   height: 22px;
+  stroke: currentColor;
+  stroke-width: 2.4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  shape-rendering: geometricPrecision;
 }
 
 .mobile-drawer-overlay {
   display: none;
   position: fixed;
   inset: 0;
-  background-color: rgba(15, 45, 92, 0.55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  z-index: var(--z-modal-backdrop);
+  background-color: rgba(15, 45, 92, 0.35);
+  z-index: 900;
   opacity: 0;
   transition: opacity var(--transition-normal);
 }
@@ -426,25 +449,37 @@
 }
 
 .mobile-drawer {
+  display: none;
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 340px;
-  max-width: 88vw;
+  right: 0;
+  width: 320px;
+  max-width: 85vw;
   height: 100vh;
   height: 100dvh;
-  background-color: var(--color-surface-pure);
-  z-index: var(--z-mobile-drawer);
-  display: flex;
+  background-color: #FFFFFF;
+  z-index: 1000;
   flex-direction: column;
   box-shadow: -8px 0 32px rgba(0, 0, 0, 0.22);
-  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .mobile-drawer.active {
-  right: 0;
+  display: flex;
+  animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .mobile-drawer-header {
@@ -472,7 +507,15 @@
   color: var(--color-brand-dark);
   font-size: 1.25rem;
   line-height: 1;
+  padding: 0;
   transition: all var(--transition-fast);
+}
+
+.mobile-drawer-close svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
 }
 
 .mobile-drawer-close:hover,
@@ -869,6 +912,8 @@
   margin-bottom: var(--space-20);
   padding-bottom: var(--space-16);
   border-bottom: 1px solid var(--color-border-subtle);
+  flex-wrap: wrap;
+  gap: var(--space-12);
 }
 
 .elevation-svg-container {
@@ -882,7 +927,8 @@
 
 .elevation-legend {
   display: flex;
-  gap: var(--space-24);
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-16);
   margin-top: var(--space-16);
   font-size: var(--text-caption);
   color: var(--color-text-muted);
@@ -1770,6 +1816,56 @@
   }
   .header-actions .btn {
     display: none;
+  }
+}
+
+/* Clinical & Form Responsive Helpers */
+.clinical-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-16);
+}
+
+.form-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+}
+
+@media (max-width: 768px) {
+  .clinical-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive Two-Column Detail Layouts */
+.detail-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-48);
+  align-items: start;
+}
+
+.guide-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-48);
+  align-items: start;
+}
+
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-48);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .detail-layout-grid,
+  .guide-layout-grid,
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
   }
 }
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://abctrekinnepal.com/sitemap.xml
+Sitemap: https://www.abctrekinnepal.com/sitemap.xml

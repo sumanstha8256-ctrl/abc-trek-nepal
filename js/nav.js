@@ -10,7 +10,10 @@
     const drawer = document.getElementById('mobileMenu');
     const overlay = document.getElementById('mobileOverlay');
 
-    if (!drawer || !overlay) return;
+    if (!drawer || !overlay) {
+      console.warn('[MobileNav] Drawer or overlay element not found');
+      return;
+    }
 
     function toggleMenu(open) {
       if (open) {
@@ -27,6 +30,7 @@
     if (openBtn) {
       openBtn.addEventListener('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         toggleMenu(true);
       });
     }
@@ -34,12 +38,14 @@
     if (closeBtn) {
       closeBtn.addEventListener('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         toggleMenu(false);
       });
     }
 
     if (overlay) {
-      overlay.addEventListener('click', function () {
+      overlay.addEventListener('click', function (e) {
+        e.preventDefault();
         toggleMenu(false);
       });
     }
@@ -75,13 +81,15 @@
       });
     });
 
-    // Close drawer when clicking any link inside
+    // Close drawer when clicking any standard nav link inside
     const drawerLinks = drawer.querySelectorAll('a:not(.mobile-accordion-toggle)');
     drawerLinks.forEach(function (link) {
       link.addEventListener('click', function () {
         toggleMenu(false);
       });
     });
+
+    console.log('[MobileNav] Initialized successfully');
   }
 
   if (document.readyState === 'loading') {

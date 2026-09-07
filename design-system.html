@@ -6,8 +6,8 @@
   <title>Design System & Component Showcase | ABC Trek in Nepal</title>
   <meta name="description" content="Visual Design System, Design Tokens, Typography, and UI Components for ABC Trek in Nepal (abctrekinnepal.com).">
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/design-system.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/design-system.css?v=2.1">
+  <link rel="stylesheet" href="css/components.css?v=2.1">
   <style>
     /* Showcase-specific helper styles */
     .showcase-header {
@@ -236,11 +236,9 @@
                   </svg>
                 </button>
           <button class="mobile-nav-toggle" id="mobileMenuOpen" aria-label="Open Navigation Menu">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
           </button>
         </div>
             </div>
@@ -255,38 +253,43 @@
         <span class="brand-name">ABC TREK</span>
         <span class="brand-tagline">IN NEPAL</span>
       </div>
-      <button class="mobile-drawer-close" id="mobileMenuClose" aria-label="Close Navigation Menu">✕</button>
+      <button class="mobile-drawer-close" id="mobileMenuClose" aria-label="Close Navigation Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
     </div>
     <div class="mobile-drawer-body">
       <ul class="mobile-drawer-links">
-        <li><a href="index.html" class="mobile-nav-link"><span>Home</span></a></li>
+        <li><a href="/" class="mobile-nav-link"><span>Home</span></a></li>
         <li>
           <button class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
             <span>Annapurna Treks</span>
             <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <ul class="mobile-accordion-panel">
-            <li><a href="treks/annapurna-base-camp-classic-10-days.html" class="mobile-sub-link"><span>10-Day Sanctuary (Flagship)</span></a></li>
-            <li><a href="treks/8-days-annapurna-base-camp-trek.html" class="mobile-sub-link"><span>8 Days ABC Trek</span></a></li>
-            <li><a href="treks/short-annapurna-base-camp-trek.html" class="mobile-sub-link"><span>Short ABC Trek</span></a></li>
-            <li><a href="treks/annapurna-circuit-trek.html" class="mobile-sub-link"><span>Annapurna Circuit Trek</span></a></li>
-            <li><a href="treks/14-days-annapurna-circuit-trek.html" class="mobile-sub-link"><span>14 Days Circuit Trek</span></a></li>
-            <li><a href="treks/ghorepani-poon-hill-trek.html" class="mobile-sub-link"><span>Ghorepani Poon Hill</span></a></li>
-            <li><a href="treks/3-days-poon-hill-trek.html" class="mobile-sub-link"><span>3 Days Poon Hill</span></a></li>
-            <li><a href="treks/mardi-himal-trek.html" class="mobile-sub-link"><span>Mardi Himal Ridge</span></a></li>
-            <li><a href="treks/nar-phu-valley-trek.html" class="mobile-sub-link"><span>Nar Phu Valley</span></a></li>
-            <li><a href="treks/khopra-ridge-trek.html" class="mobile-sub-link"><span>Khopra Ridge</span></a></li>
-            <li><a href="treks/index.html" class="mobile-sub-link" style="font-weight: 700; color: var(--color-accent);"><span>View All 18 Treks &rarr;</span></a></li>
+            <li><a href="/treks/annapurna-base-camp-classic-10-days" class="mobile-sub-link"><span>10-Day Sanctuary (Flagship)</span></a></li>
+            <li><a href="/treks/8-days-annapurna-base-camp-trek" class="mobile-sub-link"><span>8 Days ABC Trek</span></a></li>
+            <li><a href="/treks/short-annapurna-base-camp-trek" class="mobile-sub-link"><span>Short ABC Trek</span></a></li>
+            <li><a href="/treks/annapurna-circuit-trek" class="mobile-sub-link"><span>Annapurna Circuit Trek</span></a></li>
+            <li><a href="/treks/14-days-annapurna-circuit-trek" class="mobile-sub-link"><span>14 Days Circuit Trek</span></a></li>
+            <li><a href="/treks/ghorepani-poon-hill-trek" class="mobile-sub-link"><span>Ghorepani Poon Hill</span></a></li>
+            <li><a href="/treks/3-days-poon-hill-trek" class="mobile-sub-link"><span>3 Days Poon Hill</span></a></li>
+            <li><a href="/treks/mardi-himal-trek" class="mobile-sub-link"><span>Mardi Himal Ridge</span></a></li>
+            <li><a href="/treks/nar-phu-valley-trek" class="mobile-sub-link"><span>Nar Phu Valley</span></a></li>
+            <li><a href="/treks/khopra-ridge-trek" class="mobile-sub-link"><span>Khopra Ridge</span></a></li>
+            <li><a href="/treks" class="mobile-sub-link" style="font-weight: 700; color: var(--color-accent);"><span>View All 18 Treks &rarr;</span></a></li>
           </ul>
         </li>
-        <li><a href="guide/annapurna-base-camp-trek-ultimate-guide.html" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
-        <li><a href="safety-ethics/high-altitude-medical-protocols-evacuation.html" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
-        <li><a href="company/about-us.html" class="mobile-nav-link"><span>About Our Specialists</span></a></li>
-        <li><a href="company/contact.html" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
+        <li><a href="/guide/annapurna-base-camp-trek-ultimate-guide" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
+        <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
+        <li><a href="/company/about-us" class="mobile-nav-link"><span>About Our Specialists</span></a></li>
+        <li><a href="/company/contact" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
       </ul>
     </div>
     <div class="mobile-drawer-footer">
-      <a href="plan-your-trek.html" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Plan Your Trek</a>
+      <a href="/plan-your-trek" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Plan Your Trek</a>
       <a href="https://wa.me/9779818188459" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center; color: #22C55E; border-color: #22C55E;">WhatsApp Concierge</a>
     </div>
   </div>
@@ -782,7 +785,7 @@
             </select>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16);">
+          <div class="form-row-grid">
             <div class="form-group">
               <label class="form-label" for="trekDate">Target Month / Season *</label>
               <select id="trekDate" class="form-select" required>
@@ -803,7 +806,7 @@
             </div>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16);">
+          <div class="form-row-grid">
             <div class="form-group">
               <label class="form-label" for="fullName">Full Name *</label>
               <input type="text" id="fullName" class="form-input" placeholder="e.g. Sarah Jenkins" required>
@@ -963,6 +966,6 @@
     if (overlay) overlay.addEventListener('click', () => toggleDrawer(false));
   </script>
 
-  <script src="js/nav.js" defer></script>
+  <script src="js/nav.js?v=2.1" defer></script>
 </body>
 </html>

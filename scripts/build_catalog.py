@@ -119,7 +119,7 @@ catalog_html = f"""<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Annapurna Treks & Routes Directory | ABC Trek in Nepal</title>
   <meta name="description" content="Complete portfolio of Annapurna Base Camp, Annapurna Circuit, Poon Hill, Mardi Himal, and remote wilderness treks in Nepal. Operated by licensed local experts.">
-  <link rel="canonical" href="https://abctrekinnepal.com/treks/">
+  <link rel="canonical" href="https://www.abctrekinnepal.com/treks/">
   
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -170,7 +170,7 @@ catalog_html = f"""<!DOCTYPE html>
   <header class="site-header">
     <div class="container">
       <div class="header-inner">
-        <a href="../index.html" class="brand-logo">
+        <a href="../index" class="brand-logo">
           <svg class="logo-symbol" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18 4L4 28H32L18 4Z" stroke="#0F2D5C" stroke-width="2.5" stroke-linejoin="round"/>
             <path d="M18 12L10 28H26L18 12Z" fill="#F97316"/>
@@ -185,21 +185,21 @@ catalog_html = f"""<!DOCTYPE html>
         <nav class="desktop-nav" aria-label="Primary Navigation">
           {get_megamenu_html("sub")}
           <div class="nav-item">
-            <a href="../guide/annapurna-base-camp-trek-ultimate-guide.html" class="nav-link">Trek Planning</a>
+            <a href="../guide/annapurna-base-camp-trek-ultimate-guide" class="nav-link">Trek Planning</a>
           </div>
           <div class="nav-item">
-            <a href="../safety-ethics/high-altitude-medical-protocols-evacuation.html" class="nav-link">Safety & Ethics</a>
+            <a href="../safety-ethics/high-altitude-medical-protocols-evacuation" class="nav-link">Safety & Ethics</a>
           </div>
           <div class="nav-item">
-            <a href="../company/about-us.html" class="nav-link">About Us</a>
+            <a href="../company/about-us" class="nav-link">About Us</a>
           </div>
           <div class="nav-item">
-            <a href="../company/contact.html" class="nav-link">Contact</a>
+            <a href="../company/contact" class="nav-link">Contact</a>
           </div>
         </nav>
 
         <div class="header-actions">
-          <a href="../plan-your-trek.html" class="btn btn-primary btn-sm">Plan Your Trek</a>
+          <a href="../plan-your-trek" class="btn btn-primary btn-sm">Plan Your Trek</a>
           <button class="mobile-nav-toggle" id="mobileMenuOpen" aria-label="Open Navigation Menu">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -224,34 +224,34 @@ catalog_html = f"""<!DOCTYPE html>
     </div>
     <div class="mobile-drawer-body">
       <ul class="mobile-drawer-links">
-        <li><a href="../index.html" class="mobile-nav-link"><span>Home</span></a></li>
+        <li><a href="../index" class="mobile-nav-link"><span>Home</span></a></li>
         <li>
           <button class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
             <span>Annapurna Treks</span>
             <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <ul class="mobile-accordion-panel">
-            <li><a href="../treks/annapurna-base-camp-classic-10-days.html" class="mobile-sub-link"><span>10-Day Sanctuary (Flagship)</span></a></li>
-            <li><a href="../treks/8-days-annapurna-base-camp-trek.html" class="mobile-sub-link"><span>8 Days ABC Trek</span></a></li>
-            <li><a href="../treks/short-annapurna-base-camp-trek.html" class="mobile-sub-link"><span>Short ABC Trek</span></a></li>
-            <li><a href="../treks/annapurna-circuit-trek.html" class="mobile-sub-link"><span>Annapurna Circuit Trek</span></a></li>
-            <li><a href="../treks/14-days-annapurna-circuit-trek.html" class="mobile-sub-link"><span>14 Days Circuit Trek</span></a></li>
-            <li><a href="../treks/ghorepani-poon-hill-trek.html" class="mobile-sub-link"><span>Ghorepani Poon Hill</span></a></li>
-            <li><a href="../treks/3-days-poon-hill-trek.html" class="mobile-sub-link"><span>3 Days Poon Hill</span></a></li>
-            <li><a href="../treks/mardi-himal-trek.html" class="mobile-sub-link"><span>Mardi Himal Ridge</span></a></li>
-            <li><a href="../treks/nar-phu-valley-trek.html" class="mobile-sub-link"><span>Nar Phu Valley</span></a></li>
-            <li><a href="../treks/khopra-ridge-trek.html" class="mobile-sub-link"><span>Khopra Ridge</span></a></li>
-            <li><a href="../treks/index.html" class="mobile-sub-link" style="font-weight: 700; color: var(--color-accent);"><span>View All 18 Treks &rarr;</span></a></li>
+            <li><a href="../treks/annapurna-base-camp-classic-10-days" class="mobile-sub-link"><span>10-Day Sanctuary (Flagship)</span></a></li>
+            <li><a href="../treks/8-days-annapurna-base-camp-trek" class="mobile-sub-link"><span>8 Days ABC Trek</span></a></li>
+            <li><a href="../treks/short-annapurna-base-camp-trek" class="mobile-sub-link"><span>Short ABC Trek</span></a></li>
+            <li><a href="../treks/annapurna-circuit-trek" class="mobile-sub-link"><span>Annapurna Circuit Trek</span></a></li>
+            <li><a href="../treks/14-days-annapurna-circuit-trek" class="mobile-sub-link"><span>14 Days Circuit Trek</span></a></li>
+            <li><a href="../treks/ghorepani-poon-hill-trek" class="mobile-sub-link"><span>Ghorepani Poon Hill</span></a></li>
+            <li><a href="../treks/3-days-poon-hill-trek" class="mobile-sub-link"><span>3 Days Poon Hill</span></a></li>
+            <li><a href="../treks/mardi-himal-trek" class="mobile-sub-link"><span>Mardi Himal Ridge</span></a></li>
+            <li><a href="../treks/nar-phu-valley-trek" class="mobile-sub-link"><span>Nar Phu Valley</span></a></li>
+            <li><a href="../treks/khopra-ridge-trek" class="mobile-sub-link"><span>Khopra Ridge</span></a></li>
+            <li><a href="../treks/index" class="mobile-sub-link" style="font-weight: 700; color: var(--color-accent);"><span>View All 18 Treks &rarr;</span></a></li>
           </ul>
         </li>
-        <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide.html" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
-        <li><a href="../safety-ethics/high-altitude-medical-protocols-evacuation.html" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
-        <li><a href="../company/about-us.html" class="mobile-nav-link"><span>About Us</span></a></li>
-        <li><a href="../company/contact.html" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
+        <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
+        <li><a href="../safety-ethics/high-altitude-medical-protocols-evacuation" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
+        <li><a href="../company/about-us" class="mobile-nav-link"><span>About Us</span></a></li>
+        <li><a href="../company/contact" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
       </ul>
     </div>
     <div class="mobile-drawer-footer">
-      <a href="../plan-your-trek.html" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Plan Your Trek</a>
+      <a href="../plan-your-trek" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Plan Your Trek</a>
       <a href="https://wa.me/9779818188459" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center; color: #22C55E; border-color: #22C55E;">WhatsApp Concierge</a>
     </div>
   </div>
@@ -260,7 +260,7 @@ catalog_html = f"""<!DOCTYPE html>
   <div style="background-color: var(--color-surface-subtle); border-bottom: 1px solid var(--color-border-subtle); padding: var(--space-12) 0;">
     <div class="container">
       <div class="breadcrumbs" style="margin-bottom: 0;">
-        <a href="../index.html">Home</a>
+        <a href="../index">Home</a>
         <span class="breadcrumb-separator">/</span>
         <span class="breadcrumb-current">All Annapurna Treks</span>
       </div>
@@ -317,31 +317,31 @@ catalog_html = f"""<!DOCTYPE html>
         <div>
           <div class="footer-col-title">Signature Treks</div>
           <ul class="footer-links">
-            <li><a href="annapurna-base-camp-classic-10-days.html" class="footer-link">10-Day Classic Sanctuary</a></li>
-            <li><a href="annapurna-circuit-trek.html" class="footer-link">Annapurna Circuit Trek</a></li>
-            <li><a href="ghorepani-poon-hill-trek.html" class="footer-link">Ghorepani Poon Hill Trek</a></li>
-            <li><a href="mardi-himal-trek.html" class="footer-link">Mardi Himal Trek</a></li>
-            <li><a href="nar-phu-valley-trek.html" class="footer-link">Nar Phu Valley Trek</a></li>
+            <li><a href="annapurna-base-camp-classic-10-days" class="footer-link">10-Day Classic Sanctuary</a></li>
+            <li><a href="annapurna-circuit-trek" class="footer-link">Annapurna Circuit Trek</a></li>
+            <li><a href="ghorepani-poon-hill-trek" class="footer-link">Ghorepani Poon Hill Trek</a></li>
+            <li><a href="mardi-himal-trek" class="footer-link">Mardi Himal Trek</a></li>
+            <li><a href="nar-phu-valley-trek" class="footer-link">Nar Phu Valley Trek</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-col-title">Trekker Resources</div>
           <ul class="footer-links">
-            <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide.html" class="footer-link">Ultimate ABC Guide (2026)</a></li>
-            <li><a href="../safety-ethics/high-altitude-medical-protocols-evacuation.html" class="footer-link">Altitude Sickness Science</a></li>
-            <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide.html#packing" class="footer-link">Complete Packing Checklist</a></li>
-            <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide.html#permits" class="footer-link">2026 ACAP Permits & Rules</a></li>
+            <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide" class="footer-link">Ultimate ABC Guide (2026)</a></li>
+            <li><a href="../safety-ethics/high-altitude-medical-protocols-evacuation" class="footer-link">Altitude Sickness Science</a></li>
+            <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide#packing" class="footer-link">Complete Packing Checklist</a></li>
+            <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide#permits" class="footer-link">2026 ACAP Permits & Rules</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-col-title">Trust & Support</div>
           <ul class="footer-links">
-            <li><a href="../safety-ethics/high-altitude-medical-protocols-evacuation.html" class="footer-link">Medical Protocols & Rescue</a></li>
-            <li><a href="../company/about-us.html" class="footer-link">About Our Mountain Team</a></li>
-            <li><a href="../company/contact.html" class="footer-link">Contact Operations Base</a></li>
-            <li><a href="../plan-your-trek.html" class="footer-link">Interactive Trip Builder</a></li>
+            <li><a href="../safety-ethics/high-altitude-medical-protocols-evacuation" class="footer-link">Medical Protocols & Rescue</a></li>
+            <li><a href="../company/about-us" class="footer-link">About Our Mountain Team</a></li>
+            <li><a href="../company/contact" class="footer-link">Contact Operations Base</a></li>
+            <li><a href="../plan-your-trek" class="footer-link">Interactive Trip Builder</a></li>
           </ul>
         </div>
       </div>
@@ -349,8 +349,8 @@ catalog_html = f"""<!DOCTYPE html>
       <div class="footer-bottom">
         <div>&copy; 2026 ABC Trek in Nepal. All rights reserved.</div>
         <div style="display: flex; gap: var(--space-16);">
-          <a href="../company/about-us.html" class="footer-link">Privacy Policy</a>
-          <a href="../company/about-us.html" class="footer-link">Terms & Conditions</a>
+          <a href="../company/about-us" class="footer-link">Privacy Policy</a>
+          <a href="../company/about-us" class="footer-link">Terms & Conditions</a>
         </div>
       </div>
     </div>
