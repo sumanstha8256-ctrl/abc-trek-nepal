@@ -1,5 +1,17 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/guide/annapurna-base-camp-trek-ultimate-guide",
+      "destination": "/guide/annapurna-base-camp-trek",
+      "permanent": true
+    },
+    {
+      "source": "/guide/annapurna-base-camp-trek-ultimate-guide.html",
+      "destination": "/guide/annapurna-base-camp-trek",
+      "permanent": true
+    }
+  ]
 }

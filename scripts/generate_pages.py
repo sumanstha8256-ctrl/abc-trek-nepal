@@ -205,7 +205,7 @@ def generate_trek_page(trek):
         <nav class="desktop-nav">
           {get_megamenu_html("sub")}
           <div class="nav-item">
-            <a href="../guide/annapurna-base-camp-trek-ultimate-guide" class="nav-link">Trek Planning</a>
+            <a href="../guide/annapurna-base-camp-trek" class="nav-link">Trek Planning</a>
           </div>
           <div class="nav-item">
             <a href="../safety-ethics/high-altitude-medical-protocols-evacuation" class="nav-link">Safety & Ethics</a>
@@ -267,7 +267,7 @@ def generate_trek_page(trek):
             <li><a href="../treks/index" class="mobile-sub-link" style="font-weight: 700; color: var(--color-accent);"><span>View All 18 Treks &rarr;</span></a></li>
           </ul>
         </li>
-        <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
+        <li><a href="../guide/annapurna-base-camp-trek" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
         <li><a href="../safety-ethics/high-altitude-medical-protocols-evacuation" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
         <li><a href="../company/about-us" class="mobile-nav-link"><span>About Us</span></a></li>
         <li><a href="../company/contact" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
@@ -524,10 +524,10 @@ def generate_trek_page(trek):
         <div>
           <div class="footer-col-title">Trekker Resources</div>
           <ul class="footer-links">
-            <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide" class="footer-link">Ultimate ABC Guide (2026)</a></li>
+            <li><a href="../guide/annapurna-base-camp-trek" class="footer-link">Ultimate ABC Guide (2026)</a></li>
             <li><a href="../safety-ethics/high-altitude-medical-protocols-evacuation" class="footer-link">Altitude Sickness Science</a></li>
-            <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide#packing" class="footer-link">Complete Packing Checklist</a></li>
-            <li><a href="../guide/annapurna-base-camp-trek-ultimate-guide#permits" class="footer-link">2026 ACAP Permits & Rules</a></li>
+            <li><a href="../guide/annapurna-base-camp-trek#packing" class="footer-link">Complete Packing Checklist</a></li>
+            <li><a href="../guide/annapurna-base-camp-trek#permits" class="footer-link">2026 ACAP Permits & Rules</a></li>
           </ul>
         </div>
 
