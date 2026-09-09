@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System & Component Showcase | ABC Trek in Nepal</title>
+  <meta name="description" content="Visual Design System, Design Tokens, Typography, and UI Components for ABC Trek in Nepal (abctrekinnepal.com).">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/design-system.css?v=2.4">
+  <link rel="stylesheet" href="/css/components.css?v=2.4">
+  <style>
+    /* Showcase-specific helper styles */
+    .showcase-header {
+      background-color: var(--color-brand-dark-deep);
+      color: #FFFFFF;
+      padding: var(--space-48) 0;
+      border-bottom: 2px solid var(--color-accent);
+    }
+    .token-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--space-20);
+      margin-top: var(--space-20);
+    }
+    .token-card {
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background-color: var(--color-surface-pure);
+    }
+    .token-swatch {
+      height: 90px;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      padding: var(--space-8);
+      font-family: var(--font-mono);
+      font-size: var(--text-caption);
+      font-weight: 700;
+    }
+    .token-info {
+      padding: var(--space-12);
+      font-size: var(--text-caption);
+    }
+    .token-name {
+      font-weight: 700;
+      color: var(--color-brand-dark);
+      margin-bottom: 2px;
+    }
+    .component-demo-block {
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-md);
+      padding: var(--space-32);
+      background-color: var(--color-surface-pure);
+      margin-top: var(--space-20);
+      box-shadow: var(--shadow-subtle);
+    }
+    .component-label {
+      font-family: var(--font-mono);
+      font-size: var(--text-caption);
+      text-transform: uppercase;
+      color: var(--color-accent);
+      letter-spacing: var(--letter-spacing-wide);
+      margin-bottom: var(--space-8);
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Showcase Banner -->
+  <div class="showcase-header">
+    <div class="container">
+      <span class="eyebrow">Living Styleguide & Component Library</span>
+      <h1 class="font-display-xl" style="color: #FFFFFF; margin-bottom: var(--space-8);">ABC Trek in Nepal</h1>
+      <p class="lead" style="color: var(--color-border-subtle); max-width: 800px; margin-bottom: 0;">
+        Definitive visual design system and responsive component framework for <code>abctrekinnepal.com</code>. Built with editorial elegance, restrained Himalayan brand tones, and strict accessibility standards.
+      </p>
+    </div>
+  </div>
+
+  <!-- 1. COLOR TOKENS & CONTRAST -->
+  <section class="section" id="tokens">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Core Palette</span>
+        <h2 class="section-title">Color System & Tokens</h2>
+        <p class="section-subtitle">
+          Engineered around pure white whitespace, authoritative midnight navy, and kinetic mountain orange reserved for high-intent actions.
+        </p>
+      </div>
+
+      <div class="token-grid">
+        <div class="token-card">
+          <div class="token-swatch" style="background-color: #0F2D5C; color: #FFFFFF;">#0F2D5C</div>
+          <div class="token-info">
+            <div class="token-name">Primary Brand Dark</div>
+            <div><code>--color-brand-dark</code></div>
+            <div style="color: var(--color-success); font-weight: 600; margin-top: 4px;">14.8:1 on White (AAA)</div>
+          </div>
+        </div>
+
+        <div class="token-card">
+          <div class="token-swatch" style="background-color: #F97316; color: #FFFFFF;">#F97316</div>
+          <div class="token-info">
+            <div class="token-name">Primary Kinetic Accent</div>
+            <div><code>--color-accent</code></div>
+            <div style="color: var(--color-text-muted); margin-top: 4px;">8.8:1 with Dark Navy text</div>
+          </div>
+        </div>
+
+        <div class="token-card">
+          <div class="token-swatch" style="background-color: #081B3A; color: #FFFFFF;">#081B3A</div>
+          <div class="token-info">
+            <div class="token-name">Deep Midnight Navy</div>
+            <div><code>--color-brand-dark-deep</code></div>
+            <div style="color: var(--color-success); font-weight: 600; margin-top: 4px;">17.2:1 on White (AAA)</div>
+          </div>
+        </div>
+
+        <div class="token-card">
+          <div class="token-swatch" style="background-color: #EEF4FA; color: #0F2D5C;">#EEF4FA</div>
+          <div class="token-info">
+            <div class="token-name">Alpine Mist Tint</div>
+            <div><code>--color-brand-dark-tint</code></div>
+            <div style="color: var(--color-text-muted); margin-top: 4px;">Subtle Section Alternation</div>
+          </div>
+        </div>
+
+        <div class="token-card">
+          <div class="token-swatch" style="background-color: #FFFFFF; border-bottom: 1px solid #E2E8F0; color: #0F2D5C;">#FFFFFF</div>
+          <div class="token-info">
+            <div class="token-name">Primary Surface Canvas</div>
+            <div><code>--color-bg</code></div>
+            <div style="color: var(--color-text-muted); margin-top: 4px;">Maximum Editorial Whitespace</div>
+          </div>
+        </div>
+
+        <div class="token-card">
+          <div class="token-swatch" style="background-color: #059669; color: #FFFFFF;">#059669</div>
+          <div class="token-info">
+            <div class="token-name">Alpine Green (Success)</div>
+            <div><code>--color-success</code></div>
+            <div style="color: var(--color-success); font-weight: 600; margin-top: 4px;">Inclusions & Safe Altitudes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TYPOGRAPHY SCALE -->
+  <section class="section section-subtle" id="typography">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Editorial Voice</span>
+        <h2 class="section-title">Typographic Hierarchy</h2>
+        <p class="section-subtitle">
+          Engineered with <em>Poppins</em> for clean, modern, and professional aesthetic across headlines, body copy, and UI telemetry.
+        </p>
+      </div>
+
+      <div class="component-demo-block" style="display: flex; flex-direction: column; gap: var(--space-24);">
+        <div>
+          <span class="component-label">Display XL (Poppins 800 / 60px)</span>
+          <div class="font-display-xl" style="line-height: 1.1;">Annapurna Base Camp Sanctuary</div>
+        </div>
+        <div>
+          <span class="component-label">Heading 1 (Poppins 700 / 36px - 44px)</span>
+          <h1>The Classic 10-Day Expedition from Pokhara</h1>
+        </div>
+        <div>
+          <span class="component-label">Heading 2 (Poppins 700 / 30px)</span>
+          <h2>Conservative High-Altitude Acclimatization Pacing</h2>
+        </div>
+        <div>
+          <span class="component-label">Heading 3 (Poppins 700 / 24px)</span>
+          <h3>Day 06: Deurali to Annapurna Base Camp (4,130m)</h3>
+        </div>
+        <div>
+          <span class="component-label">Lead Paragraph (Poppins 400 / 18px / Relaxed)</span>
+          <p class="lead">
+            Standing in the heart of the Annapurna Sanctuary is a transformative encounter with 360 degrees of 7,000- and 8,000-meter peaks. Our expeditions are guided by licensed Himalayan leaders adhering strictly to IPPG porter welfare standards.
+          </p>
+        </div>
+        <div>
+          <span class="component-label">Telemetry & Monospace (JetBrains Mono 700 / 14px)</span>
+          <div class="font-mono" style="font-size: 1.125rem; color: var(--color-brand-dark);">
+            ELEVATION: 4,130 M / 13,550 FT | GRADE: MODERATE-STRENUOUS | GPS: 28.5300° N, 83.8780° E
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HEADER & NAVIGATION COMPONENT -->
+  <section class="section" id="header-demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Navigation System</span>
+        <h2 class="section-title">Header & Global Navigation</h2>
+        <p class="section-subtitle">Sticky, accessible header with clear brand hierarchy, interactive states, and mobile drawer trigger.</p>
+      </div>
+
+      <div class="component-demo-block" style="padding: 0; overflow: visible;">
+        <header class="site-header" style="position: relative;">
+          <div class="container">
+            <div class="header-inner">
+              <a href="#" class="brand-logo">
+                <img src="/images/logo.png" alt="ABC Trek in Nepal Logo" class="brand-logo-img" width="44" height="44" style="width: 44px !important; height: 44px !important; max-width: 44px !important; max-height: 44px !important; object-fit: contain; border-radius: 50%; display: block;">
+                <div class="brand-title-wrap">
+                  <span class="brand-name">ABC TREK</span>
+                  <span class="brand-tagline">IN NEPAL</span>
+                </div>
+              </a>
+
+              <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="#treks" class="nav-link active">Annapurna Treks</a>
+                <a href="#itinerary" class="nav-link">Itineraries</a>
+                <a href="#guide" class="nav-link">Field Guides</a>
+                <a href="#safety" class="nav-link">Safety & Ethics</a>
+                <a href="#about" class="nav-link">About Us</a>
+              </nav>
+
+              <div class="header-actions">
+
+                <a href="#inquire" class="btn btn-primary btn-sm">Inquire / Book</a>
+                <button class="mobile-nav-toggle" id="demoDrawerOpen" aria-label="Open Navigation Menu">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                </button>
+          <button class="mobile-nav-toggle" id="mobileMenuOpen" aria-label="Open Navigation Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+            </div>
+          </div>
+        </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <div class="mobile-drawer" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-title-wrap">
+        <span class="brand-name">ABC TREK</span>
+        <span class="brand-tagline">IN NEPAL</span>
+      </div>
+      <button class="mobile-drawer-close" id="mobileMenuClose" aria-label="Close Navigation Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-drawer-links">
+        <li><a href="/" class="mobile-nav-link"><span>Home</span></a></li>
+        <li>
+          <button class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+            <span>Annapurna Treks</span>
+            <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <ul class="mobile-accordion-panel">
+            <li><a href="/treks/annapurna-base-camp-classic-10-days" class="mobile-sub-link"><span>10-Day Sanctuary (Flagship)</span></a></li>
+            <li><a href="/treks/8-days-annapurna-base-camp-trek" class="mobile-sub-link"><span>8 Days ABC Trek</span></a></li>
+            <li><a href="/treks/short-annapurna-base-camp-trek" class="mobile-sub-link"><span>Short ABC Trek</span></a></li>
+            <li><a href="/treks/annapurna-circuit-trek" class="mobile-sub-link"><span>Annapurna Circuit Trek</span></a></li>
+            <li><a href="/treks/14-days-annapurna-circuit-trek" class="mobile-sub-link"><span>14 Days Circuit Trek</span></a></li>
+            <li><a href="/treks/ghorepani-poon-hill-trek" class="mobile-sub-link"><span>Ghorepani Poon Hill</span></a></li>
+            <li><a href="/treks/3-days-poon-hill-trek" class="mobile-sub-link"><span>3 Days Poon Hill</span></a></li>
+            <li><a href="/treks/mardi-himal-trek" class="mobile-sub-link"><span>Mardi Himal Ridge</span></a></li>
+            <li><a href="/treks/nar-phu-valley-trek" class="mobile-sub-link"><span>Nar Phu Valley</span></a></li>
+            <li><a href="/treks/khopra-ridge-trek" class="mobile-sub-link"><span>Khopra Ridge</span></a></li>
+            <li><a href="/treks" class="mobile-sub-link" style="font-weight: 700; color: var(--color-accent);"><span>View All 18 Treks &rarr;</span></a></li>
+          </ul>
+        </li>
+        <li><a href="/guide/annapurna-base-camp-trek" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
+        <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
+        <li><a href="/company/about-us" class="mobile-nav-link"><span>About Our Specialists</span></a></li>
+        <li><a href="/company/contact" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="/plan-your-trek" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Plan Your Trek</a>
+      <a href="https://wa.me/9779818188459" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center; color: #22C55E; border-color: #22C55E;">WhatsApp Concierge</a>
+    </div>
+  </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. BUTTONS & CTA SYSTEM -->
+  <section class="section section-subtle" id="buttons">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Interactive Controls</span>
+        <h2 class="section-title">Button & CTA Hierarchy</h2>
+        <p class="section-subtitle">
+          Color-coded actions: Kinetic Orange exclusively for primary bookings; Dark Navy for secondary exploration; WhatsApp green for instant concierge.
+        </p>
+      </div>
+
+      <div class="component-demo-block" style="display: flex; flex-wrap: wrap; gap: var(--space-16); align-items: center;">
+        <button class="btn btn-primary btn-lg">Book Classic 10-Day Trek</button>
+        <button class="btn btn-primary">Primary Action</button>
+        <button class="btn btn-secondary">Secondary Dark</button>
+        <button class="btn btn-outline">Outline Explorer</button>
+        <a href="https://wa.me/9779818188459" class="btn btn-whatsapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.54 1.769.818 2.802.818 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.773-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.073-.977-.014-.235-.074-.537-.179-1.04-.395-2.146-.92-3.535-3.097-3.642-3.239-.107-.142-.871-1.16-.871-2.213s.553-1.572.749-1.787c.196-.215.428-.269.571-.269s.286.005.41.011c.13.007.306-.05.479.366.179.431.609 1.488.662 1.595.053.107.089.233.018.376-.071.143-.107.233-.214.358-.107.125-.227.28-.324.376-.107.107-.219.223-.094.438.125.215.556.915 1.192 1.482.818.729 1.509.954 1.723 1.061.214.107.34.089.465-.054.125-.143.536-.626.679-.841.143-.215.286-.179.482-.107s1.25.59 1.464.697c.214.107.357.161.41.25.054.089.054.519-.089.924z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <button class="btn btn-outline btn-sm">Small Button</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CINEMATIC HERO DEMO -->
+  <section class="section" style="padding: 0;">
+    <div class="hero-editorial">
+      <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80" alt="Annapurna Sanctuary Mountain Panorama" class="hero-background-image">
+      <div class="hero-gradient-overlay"></div>
+      
+      <div class="container hero-content">
+        <span class="eyebrow">Annapurna Sanctuary Specialist</span>
+        <h1 class="hero-title">The Definitive Annapurna Base Camp Trek</h1>
+        <p class="hero-lead">
+          Carefully paced, safety-led Himalayan expeditions into the 4,130m amphitheater of 8,000-meter giants. Operated by licensed local Sherpa and Gurung mountain leaders with strict IPPG porter welfare standards.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#itinerary" class="btn btn-primary btn-lg">Explore 10-Day Itinerary</a>
+          <a href="#safety" class="btn btn-outline-light btn-lg">View Safety Protocols</a>
+        </div>
+
+        <!-- Attached Telemetry Bar -->
+        <div class="hero-telemetry-bar">
+          <div class="telemetry-item">
+            <div class="telemetry-label">Max Elevation</div>
+            <div class="telemetry-value">4,130<span>m</span></div>
+          </div>
+          <div class="telemetry-item">
+            <div class="telemetry-label">Standard Duration</div>
+            <div class="telemetry-value">10<span>Days</span></div>
+          </div>
+          <div class="telemetry-item">
+            <div class="telemetry-label">Difficulty Grade</div>
+            <div class="telemetry-value" style="font-size: 1.1rem; color: #FDBA74;">Moderate+</div>
+          </div>
+          <div class="telemetry-item">
+            <div class="telemetry-label">Gateway City</div>
+            <div class="telemetry-value" style="font-size: 1.1rem;">Pokhara</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TRUST & CREDIBILITY STRIP -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-strip-grid">
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="trust-text-title">100% Licensed Guides</div>
+            <div class="trust-text-sub">Govt & NMA certified leaders</div>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div>
+            <div class="trust-text-title">Ethical Porter Charter</div>
+            <div class="trust-text-sub">IPPG 20kg cap & full insurance</div>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div>
+            <div class="trust-text-title">Daily Oximetry Checks</div>
+            <div class="trust-text-sub">Clinical altitude monitoring</div>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <div>
+            <div class="trust-text-title">Flexible Date Changes</div>
+            <div class="trust-text-sub">Free rebooking up to 30 days</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. TREK FACTS & OVERVIEW GRID -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="trek-overview-grid">
+        <div>
+          <span class="eyebrow">Expedition Architecture</span>
+          <h2 class="section-title">A Masterclass in High-Altitude Pacing</h2>
+          <p class="lead">
+            The Annapurna Base Camp trek offers one of the world's most dramatic amphitheaters. Unlike rapid itineraries that push trekkers recklessly up the Modi Khola canyon, our 10-day route guarantees conservative ascent gradients and adequate sleep thresholds below 3,300 meters before entering the high sanctuary.
+          </p>
+          <p>
+            You traverse diverse ecological zones: from subtropical terraced paddy fields through dense rhododendron and bamboo forests, culminating in the glacial moraines of Machhapuchhre Base Camp (3,700m) and Annapurna Base Camp (4,130m).
+          </p>
+        </div>
+
+        <div class="facts-grid">
+          <div class="fact-tile">
+            <svg class="fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            <div class="fact-title">Max Altitude</div>
+            <div class="fact-data font-mono">4,130 m (13,550 ft)</div>
+          </div>
+          <div class="fact-tile">
+            <svg class="fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <div class="fact-title">Daily Walking</div>
+            <div class="fact-data">5 – 7 Hours / Day</div>
+          </div>
+          <div class="fact-tile">
+            <svg class="fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <div class="fact-title">Accommodation</div>
+            <div class="fact-data">Curated Teahouses</div>
+          </div>
+          <div class="fact-tile">
+            <svg class="fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>
+            <div class="fact-title">Permits Included</div>
+            <div class="fact-data">ACAP Permit & Card</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. ELEVATION PROFILE COMPONENT -->
+  <section class="section section-subtle">
+    <div class="container">
+      <div class="elevation-profile-card">
+        <div class="elevation-header">
+          <div>
+            <span class="eyebrow">Trail Telemetry</span>
+            <h3 style="margin-bottom: 4px;">Route Elevation & Acclimatization Gradient</h3>
+            <p style="font-size: var(--text-body-sm); color: var(--color-text-muted); margin-bottom: 0;">
+              Daily progression from Pokhara (820m) to Annapurna Base Camp (4,130m).
+            </p>
+          </div>
+          <div class="font-mono" style="font-size: var(--text-body-sm); font-weight: 700; color: var(--color-brand-dark);">
+            NET GAIN: +3,310 METERS
+          </div>
+        </div>
+
+        <div class="elevation-svg-container">
+          <!-- Scaled SVG Elevation Profile Graphic -->
+          <svg viewBox="0 0 1000 200" width="100%" height="100%" preserveAspectRatio="none" style="display: block;">
+            <defs>
+              <linearGradient id="elevationFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#F97316" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#0F2D5C" stop-opacity="0.02"/>
+              </linearGradient>
+            </defs>
+            <!-- Area Fill -->
+            <path d="M 0,185 L 100,160 L 200,140 L 300,125 L 400,110 L 500,85 L 650,45 L 800,20 L 900,90 L 1000,175 L 1000,200 L 0,200 Z" fill="url(#elevationFill)"/>
+            <!-- Line Stroke -->
+            <path d="M 0,185 L 100,160 L 200,140 L 300,125 L 400,110 L 500,85 L 650,45 L 800,20 L 900,90 L 1000,175" fill="none" stroke="#0F2D5C" stroke-width="3.5" stroke-linecap="round"/>
+            
+            <!-- Key Elevation Markers -->
+            <circle cx="0" cy="185" r="5" fill="#059669"/>
+            <text x="10" y="180" font-family="Poppins" font-size="11" font-weight="700" fill="#0F2D5C">Pokhara 820m</text>
+            
+            <circle cx="400" cy="110" r="5" fill="#0284C7"/>
+            <text x="410" y="105" font-family="Poppins" font-size="11" font-weight="700" fill="#0F2D5C">Chhomrong 2,170m</text>
+            
+            <circle cx="650" cy="45" r="5" fill="#D97706"/>
+            <text x="660" y="40" font-family="Poppins" font-size="11" font-weight="700" fill="#D97706">MBC 3,700m</text>
+            
+            <circle cx="800" cy="20" r="7" fill="#F97316"/>
+            <text x="730" y="15" font-family="Poppins" font-size="12" font-weight="800" fill="#F97316">ABC 4,130m</text>
+          </svg>
+        </div>
+
+        <div class="elevation-legend">
+          <span><span class="legend-dot green"></span> Safe Zone (&lt; 2,000m)</span>
+          <span><span class="legend-dot blue"></span> Acclimatization Threshold (2,000m – 3,000m)</span>
+          <span><span class="legend-dot orange"></span> High Altitude Caution (3,000m – 4,000m)</span>
+          <span><span class="legend-dot red"></span> Base Camp Amphitheater (4,130m)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. DAY-BY-DAY ITINERARY ACCORDION COMPONENT -->
+  <section class="section" id="itinerary">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Field Schedule</span>
+        <h2 class="section-title">Day-by-Day Interactive Itinerary</h2>
+        <p class="section-subtitle">
+          Every day incorporates transparent walking telemetry, elevation differentials, terrain preview, and actionable guide notes.
+        </p>
+      </div>
+
+      <div class="itinerary-accordion">
+        <!-- Day 1 -->
+        <div class="itinerary-day open">
+          <button class="itinerary-trigger" onclick="this.parentElement.classList.toggle('open')">
+            <div>
+              <span class="day-index">Day 01</span>
+              <span class="day-title">Pokhara to Nayapul Drive (1.5 hrs), Trek to Tikhedhunga / Ulleri</span>
+            </div>
+            <div class="itinerary-telemetry-badges">
+              <span class="badge-telemetry">1,540m Alt</span>
+              <span class="badge-telemetry">4.5 Hrs Walk</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="itinerary-body">
+            <p>
+              After an early breakfast in Pokhara, board our private 4WD vehicle for a scenic 1.5-hour drive to the trailhead at Nayapul. Clear permit checkpoints at Birethanti (ACAP office) where our guide registers your conservation permits. Begin walking along the Modi Khola riverbed before beginning the stone staircase ascent toward Tikhedhunga.
+            </p>
+            <div class="guide-note-box">
+              <span class="guide-note-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                Lead Guide Field Note
+              </span>
+              <p>
+                The 3,300 stone steps of Ulleri start today. Do not rush. Maintain a steady, rhythmic breathing cadence and use trekking poles to relieve knee pressure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="itinerary-day">
+          <button class="itinerary-trigger" onclick="this.parentElement.classList.toggle('open')">
+            <div>
+              <span class="day-index">Day 02</span>
+              <span class="day-title">Tikhedhunga to Ghorepani via Ancient Rhododendron Forests</span>
+            </div>
+            <div class="itinerary-telemetry-badges">
+              <span class="badge-telemetry">2,860m Alt</span>
+              <span class="badge-telemetry">6.0 Hrs Walk</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="itinerary-body">
+            <p>
+              Ascend through primeval rhododendron and oak moss forests accompanied by the sound of mountain cascades. As we gain elevation toward Ghorepani, the temperatures drop and views of Annapurna South (7,219m) and Hiunchuli begin to reveal themselves.
+            </p>
+            <div class="guide-note-box">
+              <span class="guide-note-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                Lead Guide Field Note
+              </span>
+              <p>
+                Ghorepani sits at 2,860m. Evenings are cold. Hydrate with at least 3 liters of boiled water; your body loses significant moisture in cold air.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. INCLUSIONS & EXCLUSIONS LEDGER -->
+  <section class="section section-subtle" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Total Financial Transparency</span>
+        <h2 class="section-title">What Is Included & What Is Excluded</h2>
+        <p class="section-subtitle">
+          No hidden fees or surprises on the trail. Clear demarcation of all operational inclusions versus personal incidental expenses.
+        </p>
+      </div>
+
+      <div class="ledger-grid">
+        <!-- Inclusions -->
+        <div class="ledger-column inclusions">
+          <div class="ledger-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span class="ledger-title">Everything Included in Package</span>
+          </div>
+          <ul class="ledger-list">
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>All Permits:</strong> Annapurna Conservation Area Project (ACAP) permit and government registration fees.</span>
+            </li>
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Expert Mountain Guide:</strong> Licensed, English-fluent Himalayan guide certified in Wilderness First Aid.</span>
+            </li>
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Ethical Porters (IPPG Compliant):</strong> 1 porter per 2 trekkers, maximum 20kg load cap, fair living wages, and full cold-weather gear.</span>
+            </li>
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Full Teahouse Accommodation:</strong> Twin-share rooms in vetted, clean mountain lodges across all 9 nights on trail.</span>
+            </li>
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>All Trail Meals:</strong> 3 freshly prepared meals per day (Breakfast, Lunch, Dinner) plus seasonal fresh fruits and hot tea.</span>
+            </li>
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Private Ground Transport:</strong> Pokhara to Nayapul/Siwai and return via comfortable private 4WD Scorpio jeep.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Exclusions -->
+        <div class="ledger-column exclusions">
+          <div class="ledger-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <span class="ledger-title">Exclusions & Incidental Cash Needs</span>
+          </div>
+          <ul class="ledger-list">
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>International Flights & Visa:</strong> Nepal tourist entry visa ($30 for 15 days / $50 for 30 days payable on arrival in Kathmandu).</span>
+            </li>
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Travel & Rescue Insurance:</strong> Mandatory policy covering high-altitude trekking up to 4,500m and emergency helicopter extraction.</span>
+            </li>
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Teahouse Incidentals:</strong> Hot showers (NPR 300–500), battery charging (NPR 200–400), and Wi-Fi access cards.</span>
+            </li>
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Personal Trekking Gear:</strong> Down jacket, trekking boots, sleeping bag (all available for rental in Pokhara at ~$2/day).</span>
+            </li>
+            <li class="ledger-item">
+              <svg class="ledger-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Tips for Crew:</strong> Discretionary gratuity for guide and porters (customarily ~$10–$15 per day total).</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. REVIEWS & TESTIMONIALS COMPONENT -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Real Trekker Voices</span>
+        <h2 class="section-title">Verified Guest Experiences</h2>
+        <p class="section-subtitle">
+          Genuine stories from international travelers who completed the Annapurna Sanctuary journey with our mountain team.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "The pacing on this trek was flawless. Other groups were rushing through Deurali, but our guide insisted on conservative pacing. When we reached ABC at sunrise, we felt strong, clear-headed, and completely awe-struck."
+            </p>
+          </div>
+          <div class="review-author">
+            <div>
+              <div class="author-name">Elena Rostova</div>
+              <div class="author-location">Zurich, Switzerland</div>
+            </div>
+            <div class="verified-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Verified Trekker
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "What impressed me most was the respect shown to our porters. They carried reasonable weight, were warmly dressed, and ate with dignity at every teahouse. As a hiker, ethical operations matter immensely to me."
+            </p>
+          </div>
+          <div class="review-author">
+            <div>
+              <div class="author-name">Marcus Vance</div>
+              <div class="author-location">Melbourne, Australia</div>
+            </div>
+            <div class="verified-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Verified Trekker
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "Booking an overseas trek can feel daunting. The team was responsive on WhatsApp within 10 minutes, transparent about 2026 permit regulations, and our guide Pemba was a master mountain leader."
+            </p>
+          </div>
+          <div class="review-author">
+            <div>
+              <div class="author-name">David & Sarah Chen</div>
+              <div class="author-location">Vancouver, Canada</div>
+            </div>
+            <div class="verified-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Verified Trekker
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FAQ ACCORDION COMPONENT -->
+  <section class="section section-subtle" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Practical Knowledge</span>
+        <h2 class="section-title">Frequently Answered Questions</h2>
+        <p class="section-subtitle">Direct, factual answers to essential pre-departure questions.</p>
+      </div>
+
+      <div class="faq-accordion" style="max-width: 860px; margin: 0 auto;">
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="const b = this.nextElementSibling; b.style.display = b.style.display === 'block' ? 'none' : 'block';">
+            <span>Do I legally need a licensed guide for the Annapurna Base Camp Trek in 2026?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-body" style="display: block;">
+            Yes. Under the Nepal Tourism Board regulations enacted in 2023, all foreign trekkers inside Nepal's national parks and conservation areas—including the Annapurna Conservation Area (ACAP)—must be accompanied by a licensed mountain guide registered through a government-authorized trekking agency.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="const b = this.nextElementSibling; b.style.display = b.style.display === 'block' ? 'none' : 'block';">
+            <span>How serious is altitude sickness (AMS) on the ABC trek?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-body" style="display: none;">
+            Annapurna Base Camp reaches 4,130m (13,550 ft). Because the majority of nights are spent below 3,000m (Chhomrong, Dovan, Bamboo), severe AMS is substantially less frequent than on Everest Base Camp (5,364m). However, mild symptoms can occur above Deurali (3,230m). Our guides perform twice-daily pulse oximeter blood oxygen checks and carry emergency protocols.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. INQUIRY FORM COMPONENT -->
+  <section class="section" id="inquire">
+    <div class="container-reading">
+      <div class="form-card">
+        <span class="eyebrow">Direct Mountain Concierge</span>
+        <h3 style="margin-bottom: var(--space-8);">Plan Your 2026 Annapurna Trek</h3>
+        <p style="font-size: var(--text-body-sm); color: var(--color-text-muted); margin-bottom: var(--space-24);">
+          Receive a customized expedition proposal and exact pricing within 12 hours directly from our mountain operations team in Pokhara.
+        </p>
+
+        <form action="#" onsubmit="event.preventDefault(); alert('Inquiry submitted. A route director will contact you within 12 hours.');">
+          <div class="form-group">
+            <label class="form-label" for="trekSelect">Select Route Variation *</label>
+            <select id="trekSelect" class="form-select" required>
+              <option value="10-day-classic">Annapurna Base Camp Classic (10 Days - Flagship)</option>
+              <option value="7-day-express">Annapurna Base Camp Express (7 Days - Fast Hiker)</option>
+              <option value="12-day-poonhill">Annapurna Base Camp via Poon Hill (12 Days - Scenic Combo)</option>
+              <option value="custom-private">Private Bespoke Departure (Tailor-Made)</option>
+            </select>
+          </div>
+
+          <div class="form-row-grid">
+            <div class="form-group">
+              <label class="form-label" for="trekDate">Target Month / Season *</label>
+              <select id="trekDate" class="form-select" required>
+                <option value="autumn-2026">Autumn 2026 (Oct – Nov - Peak Clarity)</option>
+                <option value="spring-2026">Spring 2026 (Mar – May - Rhododendron Bloom)</option>
+                <option value="winter-2026">Winter 2026 (Dec – Jan - Snow & Solitude)</option>
+                <option value="other">Flexible / Undecided</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="groupSize">Number of Trekkers</label>
+              <select id="groupSize" class="form-select">
+                <option value="1">Solo Trekker</option>
+                <option value="2" selected>2 Trekkers (Couple / Friends)</option>
+                <option value="3-5">Small Group (3 to 5)</option>
+                <option value="6+">Private Group (6+)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-grid">
+            <div class="form-group">
+              <label class="form-label" for="fullName">Full Name *</label>
+              <input type="text" id="fullName" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="emailAddress">Email Address *</label>
+              <input type="email" id="emailAddress" class="form-input" placeholder="sarah@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="whatsappNumber">WhatsApp Phone Number (Recommended for Fast Response)</label>
+            <input type="tel" id="whatsappNumber" class="form-input" placeholder="+1 (555) 000-0000">
+            <span class="form-helper">Our Pokhara operations team will message you via WhatsApp to answer route questions immediately.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Send Expedition Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. GLOBAL MEGA-FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: var(--space-16);">
+            <img src="/images/logo.png" alt="ABC Trek in Nepal Logo" class="brand-logo-img" width="44" height="44" style="width: 44px !important; height: 44px !important; max-width: 44px !important; max-height: 44px !important; object-fit: contain; border-radius: 50%; display: block;">
+            <div class="brand-title-wrap">
+              <span class="brand-name" style="color: #FFFFFF;">ABC TREK</span>
+              <span class="brand-tagline">IN NEPAL</span>
+            </div>
+          </div>
+                    <p style="color: var(--color-border-subtle); font-size: var(--text-body-sm); max-width: 380px; line-height: 1.6;">
+            The definitive specialist operator for the Annapurna Base Camp (Sanctuary) Trek. Built on conservative high-altitude safety, licensed local leadership, and ethical Himalayan stewardship.
+          </p>
+          <div style="font-size: var(--text-caption); color: var(--color-text-inverse-muted); margin-top: var(--space-16); line-height: 1.7;">
+            <div><strong>Founder & Expedition Lead:</strong> Sugam Shrestha</div>
+            <div><strong>Kathmandu Hub:</strong> Budhanilkantha, Kathmandu, Nepal</div>
+            <div><strong>Operations Base:</strong> Lakeside-6, Pokhara, Nepal</div>
+            <div><strong>Direct Phone:</strong> <a href="tel:+9779818188459" style="color: #FFFFFF; text-decoration: underline;">+977 9818188459</a></div>
+            <div><strong>WhatsApp Concierge:</strong> <a href="https://wa.me/9779818188459" target="_blank" rel="noopener" style="color: #4ADE80; font-weight: 600; text-decoration: underline;">+977 9818188459</a></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Signature Treks</div>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">10-Day Classic Sanctuary</a></li>
+            <li><a href="#" class="footer-link">7-Day Express Route</a></li>
+            <li><a href="#" class="footer-link">12-Day ABC via Poon Hill</a></li>
+            <li><a href="#" class="footer-link">14-Day Ghandruk Circuit</a></li>
+            <li><a href="#" class="footer-link">Private Bespoke Treks</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Trekker Resources</div>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Ultimate ABC Guide 2026</a></li>
+            <li><a href="#" class="footer-link">Best Time & Weather Guide</a></li>
+            <li><a href="#" class="footer-link">Complete Packing Checklist</a></li>
+            <li><a href="#" class="footer-link">Altitude & Safety Science</a></li>
+            <li><a href="#" class="footer-link">Permits & 2026 Guide Rules</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Trust & Ethics</div>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">High-Altitude Medical Safety</a></li>
+            <li><a href="#" class="footer-link">Porter Welfare Charter (IPPG)</a></li>
+            <li><a href="#" class="footer-link">Our Licensed Mountain Guides</a></li>
+            <li><a href="#" class="footer-link">Booking Terms & Guarantee</a></li>
+            <li><a href="#" class="footer-link">Contact Operations Hub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ABC Trek in Nepal (abctrekinnepal.com). All rights reserved.</div>
+        <div style="display: flex; gap: var(--space-16);">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 15. MOBILE STICKY CONVERSION BAR (Demonstrated for Mobile Viewports) -->
+  <div class="mobile-sticky-bar">
+    <div class="mobile-sticky-inner">
+      <div class="sticky-price-block">
+        <span class="sticky-price-label">10-Day Classic</span>
+        <span class="sticky-price-val">$890 <span>USD</span></span>
+      </div>
+      <div style="display: flex; gap: var(--space-8);">
+        <a href="#inquire" class="btn btn-primary btn-sm">Inquire</a>
+        <a href="https://wa.me/9779818188459" class="btn btn-whatsapp btn-sm" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.54 1.769.818 2.802.818 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.773-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.073-.977-.014-.235-.074-.537-.179-1.04-.395-2.146-.92-3.535-3.097-3.642-3.239-.107-.142-.871-1.16-.871-2.213s.553-1.572.749-1.787c.196-.215.428-.269.571-.269s.286.005.41.011c.13.007.306-.05.479.366.179.431.609 1.488.662 1.595.053.107.089.233.018.376-.071.143-.107.233-.214.358-.107.125-.227.28-.324.376-.107.107-.219.223-.094.438.125.215.556.915 1.192 1.482.818.729 1.509.954 1.723 1.061.214.107.34.089.465-.054.125-.143.536-.626.679-.841.143-.215.286-.179.482-.107s1.25.59 1.464.697c.214.107.357.161.41.25.054.089.054.519-.089.924z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Overlay & Menu Demo -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-title-wrap">
+        <span class="brand-name">ABC TREK</span>
+        <span class="brand-tagline">IN NEPAL</span>
+      </div>
+      <button id="demoDrawerClose" style="background:none; border:none; cursor:pointer; font-size: 1.5rem; color: var(--color-brand-dark);">✕</button>
+    </div>
+    <ul class="mobile-drawer-links">
+      <li><a href="#overview" class="mobile-nav-link">Annapurna Treks</a></li>
+      <li><a href="#itinerary" class="mobile-nav-link">10-Day Itinerary</a></li>
+      <li><a href="#pricing" class="mobile-nav-link">Pricing & Inclusions</a></li>
+      <li><a href="#reviews" class="mobile-nav-link">Verified Reviews</a></li>
+      <li><a href="#faq" class="mobile-nav-link">Field FAQs</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#inquire" class="btn btn-primary" style="width: 100%;">Plan Your Trek</a>
+      <a href="https://wa.me/9779818188459" class="btn btn-whatsapp" style="width: 100%;">WhatsApp Us</a>
+    </div>
+  </div>
+
+  <!-- Interactive Demo Drawer Script -->
+  <script>
+    const openBtn = document.getElementById('demoDrawerOpen');
+    const closeBtn = document.getElementById('demoDrawerClose');
+    const drawer = document.getElementById('mobileDrawer');
+    const overlay = document.getElementById('drawerOverlay');
+
+    function toggleDrawer(open) {
+      if (open) {
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      } else {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (openBtn) openBtn.addEventListener('click', () => toggleDrawer(true));
+    if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
+    if (overlay) overlay.addEventListener('click', () => toggleDrawer(false));
+  </script>
+  <!-- Floating Quick Actions: Scroll to Top & WhatsApp -->
+  <aside class="floating-actions" aria-label="Quick Actions">
+    <button type="button" class="btn-floating btn-scroll-top" id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+    <a href="https://wa.me/9779818188459" class="btn-floating btn-whatsapp" id="whatsappBtn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.101-.477-.151-.678.15-.2.302-.778.98-.953 1.181-.176.201-.351.226-.652.076-.301-.151-1.272-.469-2.423-1.496-.896-.799-1.501-1.787-1.677-2.088-.175-.302-.019-.465.132-.615.136-.135.301-.352.451-.527.151-.176.201-.302.302-.503.101-.201.05-.377-.025-.528-.075-.151-.677-1.633-.928-2.236-.244-.588-.493-.508-.678-.517l-.578-.01c-.201 0-.527.075-.803.377s-1.055 1.03-1.055 2.513c0 1.482 1.08 2.914 1.23 3.115.151.2 2.126 3.247 5.151 4.553.72.31 1.282.496 1.72.636.723.23 1.381.197 1.901.12.58-.087 1.78-.727 2.031-1.431.251-.703.251-1.306.176-1.431-.075-.126-.276-.201-.577-.352z"/>
+        <path d="M12.042 2C6.51 2 2.023 6.486 2.023 12.019c0 1.996.587 3.864 1.603 5.441L2 22.062l4.776-1.571c1.517.944 3.308 1.488 5.266 1.488 5.532 0 10.019-4.486 10.019-10.019 0-5.533-4.487-10.019-10.019-10.019zm0 18.238c-1.745 0-3.364-.537-4.708-1.455l-.338-.231-2.83.931.942-2.759-.253-.356c-1.026-1.442-1.57-3.155-1.57-4.908 0-4.664 3.794-8.458 8.458-8.458 4.663 0 8.458 3.794 8.458 8.458 0 4.663-3.795 8.458-8.458 8.458z"/>
+      </svg>
+    </a>
+  </aside>
+
+
+  <script src="/js/nav.js?v=2.4" defer></script>
+</body>
+</html>

@@ -23,5 +23,10 @@ desktop.ini
 *.sublime-project
 *.sublime-workspace
 
-# Local test scratch files
-scratch/
+# Internal development tools & deploy bundles
+_internal_tools/
+deploy_package/
+deploy_package.zip
+organize_and_package.py
+dev_server.py
+
