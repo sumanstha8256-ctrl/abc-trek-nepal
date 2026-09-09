@@ -5,7 +5,7 @@ import re
 phone_display = "+977 9818188459"
 whatsapp_url = "https://wa.me/9779818188459"
 location_display = "Budhanilkantha, Kathmandu, Nepal"
-author_display = "Suman Shrestha"
+author_display = "Sugam Shrestha"
 
 # Find all HTML files
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))

@@ -22,6 +22,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.abctrekinnepal.com/guide/annapurna-base-camp-trek-september</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://www.abctrekinnepal.com/safety-ethics/high-altitude-medical-protocols-evacuation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -30,6 +35,16 @@
     <loc>https://www.abctrekinnepal.com/company/about-us</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.abctrekinnepal.com/team/sugam-shrestha</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.abctrekinnepal.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.abctrekinnepal.com/company/contact</loc>

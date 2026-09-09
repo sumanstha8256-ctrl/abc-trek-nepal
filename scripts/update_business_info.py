@@ -11,7 +11,7 @@ def get_footer_block(depth=0):
             The definitive specialist operator for the Annapurna Base Camp (Sanctuary) Trek. Built on conservative high-altitude safety, licensed local leadership, and ethical Himalayan stewardship.
           </p>
           <div style="font-size: var(--text-caption); color: var(--color-text-inverse-muted); margin-top: var(--space-16); line-height: 1.7;">
-            <div><strong>Founder & Expedition Lead:</strong> Suman Shrestha</div>
+            <div><strong>Founder & Expedition Lead:</strong> Sugam Shrestha</div>
             <div><strong>Kathmandu Hub:</strong> Budhanilkantha, Kathmandu, Nepal</div>
             <div><strong>Operations Base:</strong> Lakeside-6, Pokhara, Nepal</div>
             <div><strong>Direct Phone:</strong> <a href="tel:+9779818188459" style="color: #FFFFFF; text-decoration: underline;">+977 9818188459</a></div>

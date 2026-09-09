@@ -32,11 +32,7 @@
     <div class="container">
       <div class="header-inner">
         <a href="/" class="brand-logo">
-          <svg class="logo-symbol" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 4L4 28H32L18 4Z" stroke="#0F2D5C" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M18 12L10 28H26L18 12Z" fill="#F97316"/>
-            <path d="M18 18L14 28H22L18 18Z" fill="#FFFFFF"/>
-          </svg>
+          <img src="../images/logo.png" alt="ABC Trek in Nepal Logo" class="brand-logo-img">
           <div class="brand-title-wrap">
             <span class="brand-name">ABC TREK</span>
             <span class="brand-tagline">IN NEPAL</span>
@@ -143,6 +139,9 @@
             <a href="/guide/annapurna-base-camp-trek" class="nav-link">Trek Planning</a>
           </div>
           <div class="nav-item">
+            <a href="/blog" class="nav-link">Blog</a>
+          </div>
+          <div class="nav-item">
             <a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="nav-link">Safety & Ethics</a>
           </div>
           <div class="nav-item">
@@ -204,6 +203,7 @@
           </ul>
         </li>
         <li><a href="/guide/annapurna-base-camp-trek" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
+        <li><a href="/blog" class="mobile-nav-link"><span>Annapurna Trekking Blog</span></a></li>
         <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
         <li><a href="/company/about-us" class="mobile-nav-link"><span>About Our Specialists</span></a></li>
         <li><a href="/company/contact" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
@@ -552,10 +552,7 @@
       <div class="footer-grid">
         <div>
           <div class="brand-logo" style="margin-bottom: var(--space-16);">
-            <svg class="logo-symbol" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 4L4 28H32L18 4Z" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round"/>
-              <path d="M18 12L10 28H26L18 12Z" fill="#F97316"/>
-            </svg>
+            <img src="../images/logo.png" alt="ABC Trek in Nepal Logo" class="brand-logo-img">
             <div class="brand-title-wrap">
               <span class="brand-name" style="color: #FFFFFF;">ABC TREK</span>
               <span class="brand-tagline">IN NEPAL</span>
@@ -565,7 +562,7 @@
             The definitive specialist operator for the Annapurna Base Camp (Sanctuary) Trek. Built on conservative high-altitude safety, licensed local leadership, and ethical Himalayan stewardship.
           </p>
           <div style="font-size: var(--text-caption); color: var(--color-text-inverse-muted); margin-top: var(--space-16); line-height: 1.7;">
-            <div><strong>Founder & Expedition Lead:</strong> Suman Shrestha</div>
+            <div><strong>Founder & Expedition Lead:</strong> Sugam Shrestha</div>
             <div><strong>Kathmandu Hub:</strong> Budhanilkantha, Kathmandu, Nepal</div>
             <div><strong>Operations Base:</strong> Lakeside-6, Pokhara, Nepal</div>
             <div><strong>Direct Phone:</strong> <a href="tel:+9779818188459" style="color: #FFFFFF; text-decoration: underline;">+977 9818188459</a></div>
@@ -588,6 +585,7 @@
           <div class="footer-col-title">Trekker Resources</div>
           <ul class="footer-links">
             <li><a href="/guide/annapurna-base-camp-trek" class="footer-link">Ultimate ABC Guide (2026)</a></li>
+            <li><a href="/blog" class="footer-link">Annapurna Field Blog</a></li>
             <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="footer-link">Altitude Sickness Science</a></li>
             <li><a href="/guide/annapurna-base-camp-trek#packing" class="footer-link">Complete Packing Checklist</a></li>
             <li><a href="/guide/annapurna-base-camp-trek#permits" class="footer-link">2026 ACAP Permits & Rules</a></li>
@@ -630,6 +628,21 @@
       </div>
     </div>
   </div>
+  <!-- Floating Quick Actions: Scroll to Top & WhatsApp -->
+  <aside class="floating-actions" aria-label="Quick Actions">
+    <button type="button" class="btn-floating btn-scroll-top" id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+    <a href="https://wa.me/9779818188459" class="btn-floating btn-whatsapp" id="whatsappBtn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.101-.477-.151-.678.15-.2.302-.778.98-.953 1.181-.176.201-.351.226-.652.076-.301-.151-1.272-.469-2.423-1.496-.896-.799-1.501-1.787-1.677-2.088-.175-.302-.019-.465.132-.615.136-.135.301-.352.451-.527.151-.176.201-.302.302-.503.101-.201.05-.377-.025-.528-.075-.151-.677-1.633-.928-2.236-.244-.588-.493-.508-.678-.517l-.578-.01c-.201 0-.527.075-.803.377s-1.055 1.03-1.055 2.513c0 1.482 1.08 2.914 1.23 3.115.151.2 2.126 3.247 5.151 4.553.72.31 1.282.496 1.72.636.723.23 1.381.197 1.901.12.58-.087 1.78-.727 2.031-1.431.251-.703.251-1.306.176-1.431-.075-.126-.276-.201-.577-.352z"/>
+        <path d="M12.042 2C6.51 2 2.023 6.486 2.023 12.019c0 1.996.587 3.864 1.603 5.441L2 22.062l4.776-1.571c1.517.944 3.308 1.488 5.266 1.488 5.532 0 10.019-4.486 10.019-10.019 0-5.533-4.487-10.019-10.019-10.019zm0 18.238c-1.745 0-3.364-.537-4.708-1.455l-.338-.231-2.83.931.942-2.759-.253-.356c-1.026-1.442-1.57-3.155-1.57-4.908 0-4.664 3.794-8.458 8.458-8.458 4.663 0 8.458 3.794 8.458 8.458 0 4.663-3.795 8.458-8.458 8.458z"/>
+      </svg>
+    </a>
+  </aside>
+
 
   <script src="../js/nav.js?v=2.1" defer></script>
 </body>

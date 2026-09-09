@@ -12,6 +12,11 @@
       "source": "/guide/annapurna-base-camp-trek-ultimate-guide.html",
       "destination": "/guide/annapurna-base-camp-trek",
       "permanent": true
+    },
+    {
+      "source": "/guide/annapurna-base-camp-trek-september.html",
+      "destination": "/guide/annapurna-base-camp-trek-september",
+      "permanent": true
     }
   ]
 }

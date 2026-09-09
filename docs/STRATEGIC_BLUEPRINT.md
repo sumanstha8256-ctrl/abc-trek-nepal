@@ -488,7 +488,7 @@ To execute this vision cleanly without technical debt, the website must be built
 │ PHASE 2: DESIGN SYSTEM & CORE TOKENS                                        │
 │ - CSS design system implementation (Custom Vanilla CSS).                    │
 │ - Color tokens: #FFFFFF (Canvas), #0F2D5C (Navy), #F97316 (Action Orange).  │
-│ - Typography hierarchy (Google Fonts: Outfit / Inter or Plus Jakarta Sans). │
+│ - Typography hierarchy (Google Fonts: Poppins).                             │
 │ - UI component library: Buttons, Badges, Accordions, Telemetry Cards,       │
 │   Elevation SVG Containers, Responsive Navigation, Mobile Drawer.           │
 └─────────────────────────────────────┬───────────────────────────────────────┘

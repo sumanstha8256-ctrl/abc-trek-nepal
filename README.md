@@ -24,7 +24,7 @@ ABC Trek Website/
 │   └── components.css                                # Modular UI components (header, megamenu, cards, footer)
 │
 ├── images/
-│   └── suman-shrestha.jpg                            # Founder & expedition director photo
+│   └── sugam-shrestha.jpg                            # Founder & expedition director photo
 │
 ├── company/
 │   ├── about-us.html                                 # Company story & team credentials
@@ -138,7 +138,7 @@ In [company/contact.html](company/contact.html), the contact form currently uses
 
 ## 🏔️ Brand & Expedition Contacts
 - **Specialist Operator**: ABC Trek in Nepal
-- **Expedition Lead**: Suman Shrestha
+- **Expedition Lead**: Sugam Shrestha
 - **Direct Phone / WhatsApp**: +977 9818188459
 - **Kathmandu Hub**: Budhanilkantha, Kathmandu, Nepal
 - **Operations Base**: Lakeside-6, Pokhara, Nepal

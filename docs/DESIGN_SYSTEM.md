@@ -64,19 +64,19 @@ ABC Trek in Nepal is conceived as an **editorial, cinematic, and authoritative H
 
 ## 3. TYPOGRAPHY SYSTEM & EDITORIAL HIERARCHY
 
-The typography pairs an editorial display serif with a modern geometric sans-serif:
+The typography utilizes **Poppins** across all headings, UI, and body elements for a clean, modern, and professional aesthetic:
 
 | Type Role | Font Family | Weight | Size (Desktop / Mobile) | Line Height | Usage |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Display XL** | Playfair Display | 700 (Bold) | `3.75rem` / `2.50rem` | `1.10` | Main Hero Headline |
-| **Heading 1** | Playfair Display | 700 (Bold) | `2.75rem` / `2.00rem` | `1.15` | Trek Title / Primary Page H1 |
-| **Heading 2** | Playfair Display | 700 (Bold) | `2.25rem` / `1.75rem` | `1.20` | Section Titles |
-| **Heading 3** | Plus Jakarta Sans | 700 (Bold) | `1.50rem` / `1.25rem` | `1.30` | Sub-sections, Day-by-Day titles |
-| **Heading 4** | Plus Jakarta Sans | 600 (Semi) | `1.25rem` / `1.10rem` | `1.35` | Card Headers, Inclusions title |
-| **Eyebrow** | Plus Jakarta Sans | 700 (Bold) | `0.75rem` (12px) | `1.00` | Uppercase tracked tags (`0.12em`) |
-| **Lead Body** | Plus Jakarta Sans | 400 (Regular) | `1.125rem` (18px) | `1.75` | Introductory paragraphs |
-| **Standard Body** | Plus Jakarta Sans | 400 (Regular) | `1.00rem` (16px) | `1.60` | General narrative copy |
-| **Small / Helper** | Plus Jakarta Sans | 500 (Medium) | `0.875rem` (14px) | `1.50` | Table data, subtext, badges |
+| **Display XL** | Poppins | 800 (ExtraBold) | `3.75rem` / `2.50rem` | `1.10` | Main Hero Headline |
+| **Heading 1** | Poppins | 700 (Bold) | `2.75rem` / `2.00rem` | `1.15` | Trek Title / Primary Page H1 |
+| **Heading 2** | Poppins | 700 (Bold) | `2.25rem` / `1.75rem` | `1.20` | Section Titles |
+| **Heading 3** | Poppins | 700 (Bold) | `1.50rem` / `1.25rem` | `1.30` | Sub-sections, Day-by-Day titles |
+| **Heading 4** | Poppins | 600 (Semi) | `1.25rem` / `1.10rem` | `1.35` | Card Headers, Inclusions title |
+| **Eyebrow** | Poppins | 700 (Bold) | `0.75rem` (12px) | `1.00` | Uppercase tracked tags (`0.12em`) |
+| **Lead Body** | Poppins | 400 (Regular) | `1.125rem` (18px) | `1.75` | Introductory paragraphs |
+| **Standard Body** | Poppins | 400 (Regular) | `1.00rem` (16px) | `1.60` | General narrative copy |
+| **Small / Helper** | Poppins | 500 (Medium) | `0.875rem` (14px) | `1.50` | Table data, subtext, badges |
 | **Telemetry** | JetBrains Mono | 600 (Semi) | `0.8125rem` (13px) | `1.20` | Altitude figures, GPS coordinates |
 
 ---
