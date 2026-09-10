@@ -8,9 +8,13 @@
   <link rel="canonical" href="https://www.abctrekinnepal.com/">
   <meta name="google-site-verification" content="Q0Z8AR2ASZnEUEFx6QNg4RwwllQV9IQrutW9go2mLNA">
   
+  <!-- Preconnect Google Fonts for Instant Typography Rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Core Design Tokens & Component Styles -->
-  <link rel="stylesheet" href="/css/design-system.css?v=2.4">
-  <link rel="stylesheet" href="/css/components.css?v=2.4">
+  <link rel="stylesheet" href="/css/design-system.css?v=2.6">
+  <link rel="stylesheet" href="/css/components.css?v=2.6">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -71,7 +75,7 @@
   </div>
 
   <!-- Global Header with Structured Dropdowns -->
-  <header class="site-header" id="mainHeader">
+  <header class="site-header hero-header-dark" id="mainHeader">
     <div class="container">
       <div class="header-inner">
         <!-- Brand Logo -->
@@ -197,8 +201,16 @@
           </div>
         </nav>
 
-        <!-- Header Actions -->
+        <!-- Header Actions: Top Treks, WhatsApp & Plan Trip -->
         <div class="header-actions">
+          <a href="/treks" class="btn-top-treks" aria-label="Browse Top 18 Annapurna Treks">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: middle; color: #F59E0B;"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            <span>Top Treks</span>
+          </a>
+          <a href="https://wa.me/9779818188459" class="header-whatsapp-pill" target="_blank" rel="noopener noreferrer" aria-label="Direct WhatsApp Concierge" title="Direct WhatsApp: +977 9818188459">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.54 1.769.818 2.802.818 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.773-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.073-.977-.014-.235-.074-.537-.179-1.04-.395-2.146-.92-3.535-3.097-3.642-3.239-.107-.142-.871-1.16-.871-2.213s.553-1.572.749-1.787c.196-.215.428-.269.571-.269s.286.005.41.011c.13.007.306-.05.479.366.179.431.609 1.488.662 1.595.053.107.089.233.018.376-.071.143-.107.233-.214.358-.107.125-.227.28-.324.376-.107.107-.219.223-.094.438.125.215.556.915 1.192 1.482.818.729 1.509.954 1.723 1.061.214.107.34.089.465-.054.125-.143.536-.626.679-.841.143-.215.286-.179.482-.107s1.25.59 1.464.697c.214.107.357.161.41.25.054.089.054.519-.089.924z"/></svg>
+            <span class="whatsapp-label">WhatsApp</span>
+          </a>
           <a href="/plan-your-trek" class="btn btn-primary btn-sm">Plan Your Trek</a>
           <button class="mobile-nav-toggle" id="mobileMenuOpen" aria-label="Open Navigation Menu">
             <span class="hamburger-bar"></span>
@@ -260,91 +272,110 @@
     </div>
   </div>
 
-  <!-- 1. CINEMATIC HERO SECTION -->
-  <section class="hero-editorial">
-    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85" alt="Annapurna Base Camp Sanctuary amphitheater at sunrise" class="hero-background-image">
-    <div class="hero-gradient-overlay"></div>
-    
-    <div class="container hero-content">
-      <span class="eyebrow">Dedicated Annapurna Specialists</span>
-      <h1 class="hero-title">The Definitive Annapurna Base Camp Trek</h1>
-      <p class="hero-lead">
-        Thoughtfully paced, safety-led Himalayan expeditions into the 4,130-meter glacial amphitheater of giants. Operated by licensed local Sherpa and Gurung mountain leaders with clinical high-altitude medical protocols and strict IPPG porter welfare standards.
-      </p>
+  <!-- 1. CINEMATIC HERO SECTION (ABC TREK IN NEPAL SPECIALIST) -->
+  <section class="hero-cinematic" id="heroSection">
+    <!-- Responsive Full-Bleed Video with Zero-Black-Screen Instant Photo Fallback -->
+    <div class="hero-video-wrapper" id="heroVideoWrapper" aria-hidden="true">
+      <!-- 1. Instant Mountain Photo (Always visible immediately, never black) -->
+      <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=2200&q=90" alt="Annapurna Sanctuary sacred mountains at sunrise" class="hero-cinematic-bg" id="heroPoster">
+      
+      <!-- 2. YouTube Video Container (Smoothly fades in only when video is actively playing) -->
+      <div id="ytHeroPlayer" class="hero-video-iframe" style="opacity: 0; transition: opacity 1.2s ease;"></div>
+    </div>
 
-      <div class="hero-actions">
-        <a href="/treks/annapurna-base-camp-classic-10-days" class="btn btn-primary btn-lg">Explore 10-Day Flagship Route</a>
-        <a href="/treks" class="btn btn-outline-light btn-lg">Compare All Routes</a>
+    <!-- Crisp Non-Dim Vignette Overlay (Leaves Center 100% Bright & Vibrant) -->
+    <div class="hero-cinematic-overlay"></div>
+
+    <!-- Discreet 4K Himalaya Live Badge -->
+    <div class="hero-video-badge" title="Authentic 4K Himalayan Expedition Footage">
+      <span class="video-pulse-dot"></span>
+      <span>4K Annapurna Footage</span>
+    </div>
+    
+    <div class="hero-cinematic-center">
+      <!-- Specialist Tagline Badge -->
+      <div class="hero-tagline-badge">
+        <span>🏔️</span>
+        <span>The Annapurna Sanctuary Specialist</span>
       </div>
 
-      <!-- Live Telemetry Bar -->
-      <div class="hero-telemetry-bar">
-        <div class="telemetry-item">
-          <div class="telemetry-label">Max Elevation</div>
-          <div class="telemetry-value">4,130<span>m</span></div>
+      <!-- High-Impact Dual Title -->
+      <h2 class="hero-cinematic-title">Experience the Sanctuary</h2>
+      <h1 class="hero-cinematic-keyword">Walk Among Giants</h1>
+      <p class="hero-cinematic-lead">
+        Thoughtfully paced, safety-led Himalayan expeditions into the 4,130-meter Annapurna amphitheater. Operated by licensed local masters with clinical altitude protocols and strict IPPG ethical porter welfare.
+      </p>
+
+      <!-- Interactive Route Search Box -->
+      <div class="hero-search-box-wrapper" id="heroSearchWrapper">
+        <div class="hero-search-bar">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="tripSearchInput" class="hero-search-input" placeholder="Search 18 Annapurna Routes (e.g., 10 Days, Circuit, Poon Hill, Mardi)..." autocomplete="off" spellcheck="false" aria-label="Search Annapurna trekking routes">
+          <button type="button" class="hero-search-clear" id="searchClearBtn" aria-label="Clear search" style="display: none;">&times;</button>
+          <button type="button" class="hero-search-submit-btn" id="searchSubmitBtn" aria-label="Find expeditions">
+            <span>Find Trips</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
-        <div class="telemetry-item">
-          <div class="telemetry-label">Standard Duration</div>
-          <div class="telemetry-value">10<span>Days</span></div>
+        <!-- Live Instant Search Dropdown -->
+        <div class="hero-search-dropdown" id="searchDropdown" style="display: none;" role="listbox"></div>
+      </div>
+
+      <!-- Quick-Category Filter Pills -->
+      <div class="hero-quick-pills">
+        <span class="pills-label">Trending Routes:</span>
+        <a href="/treks/annapurna-base-camp-classic-10-days" class="hero-pill">10-Day Classic Sanctuary</a>
+        <a href="/treks/annapurna-circuit-trek" class="hero-pill">Annapurna Circuit</a>
+        <a href="/treks/ghorepani-poon-hill-trek" class="hero-pill">Poon Hill Sunrise</a>
+        <a href="/treks/mardi-himal-trek" class="hero-pill">Mardi Himal Ridge</a>
+      </div>
+    </div>
+
+    <!-- Overlaid Glassmorphic Trust Bar (Overlaid on Mountain Cloudline) -->
+    <div class="hero-trust-bar-overlaid">
+      <div class="hero-trust-grid">
+        <div class="trust-pill-item">
+          <div class="trust-pill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="trust-pill-content">
+            <strong>10+ Years Annapurna Expertise</strong>
+            <span>Led by Specialist Sugam Shrestha</span>
+          </div>
         </div>
-        <div class="telemetry-item">
-          <div class="telemetry-label">Difficulty Grade</div>
-          <div class="telemetry-value" style="font-size: 1.15rem; color: #FDBA74;">Moderate+</div>
+
+        <div class="trust-pill-item">
+          <div class="trust-pill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="trust-pill-content">
+            <strong>100% Licensed Local Guides</strong>
+            <span>Government & NMA Mountain Leaders</span>
+          </div>
         </div>
-        <div class="telemetry-item">
-          <div class="telemetry-label">Staging Hub</div>
-          <div class="telemetry-value" style="font-size: 1.15rem;">Pokhara</div>
+
+        <div class="trust-pill-item">
+          <div class="trust-pill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="trust-pill-content">
+            <strong>Clinical Altitude Safety</strong>
+            <span>Twice-Daily SpO2 & WFR Protocols</span>
+          </div>
+        </div>
+
+        <div class="trust-pill-item">
+          <div class="trust-pill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="trust-pill-content">
+            <strong>Ethical Porter Charter</strong>
+            <span>Strict IPPG 20kg Cap & Fair Wages</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- 2. TRUST & CREDIBILITY STRIP -->
-  <div class="trust-strip">
-    <div class="container">
-      <div class="trust-strip-grid">
-        <div class="trust-item">
-          <div class="trust-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div>
-            <div class="trust-text-title">100% Licensed Local Guides</div>
-            <div class="trust-text-sub">Government & NMA registered mountain leaders</div>
-          </div>
-        </div>
-
-        <div class="trust-item">
-          <div class="trust-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <div>
-            <div class="trust-text-title">Ethical Porter Charter (IPPG)</div>
-            <div class="trust-text-sub">Strict 20kg cap, full gear, fair living wages</div>
-          </div>
-        </div>
-
-        <div class="trust-item">
-          <div class="trust-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <div>
-            <div class="trust-text-title">Daily Oximetry Monitoring</div>
-            <div class="trust-text-sub">Twice-daily pulse & SpO2 altitude checks</div>
-          </div>
-        </div>
-
-        <div class="trust-item">
-          <div class="trust-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          </div>
-          <div>
-            <div class="trust-text-title">Flexible Date Rebooking</div>
-            <div class="trust-text-sub">Free postponement up to 30 days prior</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- 3. BRAND MANIFESTO: WHY AN ANNAPURNA SPECIALIST? -->
   <section class="section" id="philosophy">
@@ -905,5 +936,47 @@
   
 
   <script src="/js/nav.js?v=2.4" defer></script>
+  <script src="/js/trip-search.js?v=1.0" defer></script>
+  <script>
+    // Smooth YouTube Hero Background Controller (Eliminates Black Box & Spinners)
+    (function () {
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      window.onYouTubeIframeAPIReady = function () {
+        new YT.Player('ytHeroPlayer', {
+          videoId: 'X7v7j12s_SI',
+          playerVars: {
+            autoplay: 1,
+            mute: 1,
+            controls: 0,
+            loop: 1,
+            playlist: 'X7v7j12s_SI',
+            playsinline: 1,
+            rel: 0,
+            showinfo: 0,
+            modestbranding: 1,
+            disablekb: 1,
+            iv_load_policy: 3
+          },
+          events: {
+            'onReady': function (e) {
+              e.target.mute();
+              e.target.playVideo();
+            },
+            'onStateChange': function (e) {
+              // Smoothly fade in video ONLY when video is actively playing frames
+              if (e.data === 1) { // 1 = YT.PlayerState.PLAYING
+                var el = document.getElementById('ytHeroPlayer');
+                if (el) el.style.opacity = '1';
+              }
+            }
+          }
+        });
+      };
+    })();
+  </script>
 </body>
 </html>
