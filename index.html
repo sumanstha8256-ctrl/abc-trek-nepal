@@ -51,6 +51,740 @@
     ]
   }
   </script>
+
+  <!-- Self-Contained Standalone Hero & Navigation Styling -->
+  <style id="standalone-hero-styles">
+/* Highlighted "Top Treks" Header Button */
+.btn-top-treks {
+  gap: 6px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  background: rgba(245, 158, 11, 0.08);
+  color: #FBBF24;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-top-treks:hover {
+  background: #F59E0B;
+  color: #081B3A;
+  border-color: #F59E0B;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-top-treks svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-top-treks:hover svg {
+  transform: scale(1.1);
+  color: #081B3A !important;
+}
+
+/* Header Direct WhatsApp Contact Pill */
+.header-whatsapp-pill {
+  gap: 6px;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  color: #4ADE80;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.header-whatsapp-pill:hover {
+  background: rgba(34, 197, 94, 0.25);
+  border-color: #4ADE80;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.25);
+}
+
+.header-whatsapp-pill svg {
+  flex-shrink: 0;
+}
+
+/* Primary CTA Button in Header */
+.header-actions .btn.btn-primary.btn-sm {
+  padding: 0 16px;
+  background-color: var(--color-accent, #F97316);
+  border: 1px solid var(--color-accent, #F97316);
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.25);
+}
+
+.header-actions .btn.btn-primary.btn-sm:hover {
+  background-color: var(--color-accent-hover, #EA580C);
+  border-color: var(--color-accent-hover, #EA580C);
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Cinematic Hero Section */
+.hero-cinematic {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #081B3A;
+  color: #FFFFFF;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+/* Full-Bleed YouTube Video & Mountain Poster Wrapper */
+.hero-video-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+  background-color: #081B3A;
+}
+
+.hero-cinematic-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  z-index: 1;
+  filter: brightness(0.98) contrast(1.06) saturate(1.12);
+}
+
+.hero-video-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 ratio */
+  min-height: 100%;
+  min-width: 177.77vh; /* 16:9 ratio */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: none;
+  z-index: 2;
+  filter: brightness(0.98) contrast(1.06) saturate(1.12);
+}
+
+/* Non-Dim Crisp Overlay: Leaves Center 100% Bright & Vibrant */
+.hero-cinematic-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, 
+      rgba(8, 27, 58, 0.52) 0%, 
+      rgba(8, 27, 58, 0.18) 18%, 
+      rgba(8, 27, 58, 0.04) 45%, 
+      rgba(8, 27, 58, 0.08) 65%, 
+      rgba(8, 27, 58, 0.35) 82%, 
+      rgba(8, 27, 58, 0.78) 100%
+    );
+  pointer-events: none;
+}
+
+/* Live Video Badge */
+.hero-video-badge {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(8, 27, 58, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  pointer-events: auto;
+}
+
+.hero-video-toggle-btn {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  padding: 0;
+  margin-left: 4px;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.hero-video-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.12);
+}
+
+.hero-video-toggle-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.hero-video-toggle-btn svg {
+  pointer-events: none;
+}
+
+.video-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #EF4444;
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.hero-cinematic-center {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  padding: 30px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-tagline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  background: rgba(8, 27, 58, 0.72);
+  border: 1px solid rgba(245, 158, 11, 0.6);
+  color: #FBBF24;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.hero-cinematic-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 2.8vw, 2.125rem);
+  font-weight: 500;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.hero-cinematic-keyword {
+  font-family: var(--font-sans);
+  font-size: clamp(2.75rem, 7.5vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.05;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45), 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.hero-cinematic-lead {
+  font-family: var(--font-sans);
+  font-size: clamp(0.9375rem, 1.6vw, 1.1875rem);
+  line-height: 1.65;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.94);
+  max-width: 720px;
+  margin: 0 auto 32px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Interactive Search Container */
+.hero-search-box-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto 20px;
+}
+
+.hero-search-bar {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 50px;
+  padding: 6px 8px 6px 22px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-search-bar:focus-within {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(245, 158, 11, 0.55);
+  transform: translateY(-2px);
+}
+
+.hero-search-bar .search-icon {
+  color: #64748B;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.hero-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.0625rem;
+  font-family: var(--font-sans);
+  color: #0F172A;
+  min-width: 0;
+  padding: 10px 0;
+}
+
+.hero-search-input::placeholder {
+  color: #94A3B8;
+  font-weight: 400;
+}
+
+.hero-search-clear {
+  background: none;
+  border: none;
+  color: #94A3B8;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: color 0.15s ease;
+}
+
+.hero-search-clear:hover {
+  color: #475569;
+}
+
+.hero-search-submit-btn {
+  background: #081B3A;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 26px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hero-search-submit-btn:hover {
+  background: #F59E0B;
+  color: #081B3A;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+}
+
+/* Autocomplete Dropdown List */
+.hero-search-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  max-height: 380px;
+  overflow-y: auto;
+  z-index: 60;
+  text-align: left;
+  padding: 6px 0;
+  border: 1px solid #E2E8F0;
+  scrollbar-width: thin;
+}
+
+.search-dropdown-header {
+  padding: 10px 20px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748B;
+  border-bottom: 1px solid #F1F5F9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+}
+
+.search-dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #0F172A;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid #F8FAFC;
+}
+
+.search-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.search-dropdown-item:hover,
+.search-dropdown-item:focus {
+  background: #F1F5F9;
+  outline: none;
+}
+
+.search-item-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.search-item-title {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: #0F172A;
+}
+
+.search-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+.search-item-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  background: #E2E8F0;
+  color: #1E293B;
+}
+
+.search-item-badge.flagship {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.search-item-arrow {
+  color: #CBD5E1;
+  font-size: 1.25rem;
+  transition: transform 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.search-dropdown-item:hover .search-item-arrow {
+  transform: translateX(3px);
+  color: #F59E0B;
+}
+
+.search-no-results {
+  padding: 24px 20px;
+  text-align: center;
+  color: #64748B;
+  font-size: 0.875rem;
+}
+
+/* Quick-Filter Pills */
+.hero-quick-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+  z-index: 4;
+  position: relative;
+}
+
+.pills-label {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 30px;
+  background: rgba(8, 27, 58, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.hero-pill:hover {
+  background: rgba(8, 27, 58, 0.85);
+  border-color: #F59E0B;
+  color: #FBBF24;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlaid Glassmorphic Trust Bar */
+.hero-trust-bar-overlaid {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  background: rgba(8, 27, 58, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 24px 0;
+  margin-top: auto;
+}
+
+.hero-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.trust-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+}
+
+.trust-pill-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F59E0B;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.trust-pill-item:hover .trust-pill-icon {
+  transform: scale(1.08);
+  background: rgba(245, 158, 11, 0.22);
+  border-color: #F59E0B;
+}
+
+.trust-pill-content strong {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.trust-pill-content span {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.35;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .hero-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-cinematic {
+    min-height: auto;
+    padding-top: 30px;
+  }
+  .hero-cinematic-center {
+    padding: 20px 16px;
+  }
+  .hero-cinematic-keyword {
+    font-size: 2.75rem;
+  }
+  .hero-search-bar {
+    padding: 4px 6px 4px 16px;
+  }
+  .hero-search-submit-btn {
+    padding: 10px 18px;
+    font-size: 0.875rem;
+  }
+  .hero-trust-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px;
+  }
+  .btn-top-treks,
+  .header-whatsapp-pill {
+    display: none;
+  }
+}
+
+
+/* Critical Hero Guarantee Styles */
+.hero-cinematic {
+  position: relative !important;
+  min-height: 92vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background-color: #081B3A !important;
+  color: #FFFFFF !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  padding-top: 40px !important;
+}
+.hero-video-wrapper {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background-color: #081B3A !important;
+}
+.hero-cinematic-bg {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 25% !important;
+  z-index: 1 !important;
+}
+.hero-video-iframe, #ytHeroPlayer, #heroVideoWrapper iframe {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 100vw !important;
+  height: 56.25vw !important;
+  min-height: 100% !important;
+  min-width: 177.77vh !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none !important;
+  border: none !important;
+  z-index: 2 !important;
+  filter: brightness(0.98) contrast(1.06) saturate(1.12) !important;
+  transition: opacity 1.2s ease-in-out !important;
+}
+.hero-cinematic-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  background: linear-gradient(180deg, 
+    rgba(8, 27, 58, 0.52) 0%, 
+    rgba(8, 27, 58, 0.18) 18%, 
+    rgba(8, 27, 58, 0.04) 45%, 
+    rgba(8, 27, 58, 0.08) 65%, 
+    rgba(8, 27, 58, 0.35) 82%, 
+    rgba(8, 27, 58, 0.78) 100%
+  ) !important;
+  pointer-events: none !important;
+}
+.hero-cinematic-center {
+  position: relative !important;
+  z-index: 3 !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  margin: auto !important;
+  padding: 30px 24px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.hero-trust-bar-overlaid {
+  position: relative !important;
+  z-index: 4 !important;
+  width: 100% !important;
+  background: rgba(8, 27, 58, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding: 24px 0 !important;
+  margin-top: auto !important;
+}
+
+  </style>
 </head>
 <body>
 
@@ -977,6 +1711,406 @@
         });
       };
     })();
+  </script>
+
+  <!-- Self-Contained 18-Trek Instant Search Engine -->
+  <script id="inline-trip-search">
+/**
+ * ABC Trek in Nepal — Instant Trip Search Autocomplete
+ * Indexes all 18 specialized Annapurna trekking routes with zero latency.
+ */
+(function () {
+  'use strict';
+
+  const ALL_TREKS = [
+    {
+      title: '10-Day Annapurna Base Camp Classic Sanctuary',
+      shortTitle: 'Annapurna Base Camp (10 Days)',
+      url: '/treks/annapurna-base-camp-classic-10-days',
+      duration: '10 Days',
+      altitude: '4,130m',
+      badge: 'Flagship',
+      category: 'Base Camp',
+      keywords: 'abc sanctuary pokhara deurali chhomrong machapuchare mbc 10 days classic popular flagship'
+    },
+    {
+      title: '8 Days Annapurna Base Camp Trek',
+      shortTitle: '8 Days ABC Trek',
+      url: '/treks/8-days-annapurna-base-camp-trek',
+      duration: '8 Days',
+      altitude: '4,130m',
+      badge: '8 Days',
+      category: 'Base Camp',
+      keywords: 'abc 8 days fast base camp sanctuary pokhara'
+    },
+    {
+      title: 'Short Annapurna Base Camp Trek (Express)',
+      shortTitle: 'Short ABC Trek',
+      url: '/treks/short-annapurna-base-camp-trek',
+      duration: '6-7 Days',
+      altitude: '4,130m',
+      badge: 'Express',
+      category: 'Base Camp',
+      keywords: 'short abc express 6 days 7 days quick fast base camp'
+    },
+    {
+      title: 'Annapurna Circuit Trek (Full Classic)',
+      shortTitle: 'Annapurna Circuit Trek',
+      url: '/treks/annapurna-circuit-trek',
+      duration: '16-18 Days',
+      altitude: '5,416m',
+      badge: 'Classic',
+      category: 'Circuit',
+      keywords: 'circuit thorong la pass muktinath manang jomsom round annapurna'
+    },
+    {
+      title: '14 Days Annapurna Circuit Trek',
+      shortTitle: '14 Days Circuit Trek',
+      url: '/treks/14-days-annapurna-circuit-trek',
+      duration: '14 Days',
+      altitude: '5,416m',
+      badge: '14 Days',
+      category: 'Circuit',
+      keywords: 'circuit 14 days thorong la manang muktinath round'
+    },
+    {
+      title: 'Short Annapurna Circuit Trek',
+      shortTitle: 'Short Circuit Trek',
+      url: '/treks/annapurna-circuit-short-trek',
+      duration: '10-12 Days',
+      altitude: '5,416m',
+      badge: '10 Days',
+      category: 'Circuit',
+      keywords: 'short circuit thorong la 10 days 12 days express'
+    },
+    {
+      title: 'Annapurna Circuit with Tilicho Lake Trek',
+      shortTitle: 'Circuit with Tilicho Lake',
+      url: '/treks/annapurna-circuit-with-tilicho-lake-trek',
+      duration: '16-18 Days',
+      altitude: '4,919m',
+      badge: 'High Alpine',
+      category: 'Circuit',
+      keywords: 'tilicho lake high altitude turquoise glacial lake thorong la circuit'
+    },
+    {
+      title: 'Ghorepani Poon Hill Sunrise Trek',
+      shortTitle: 'Ghorepani Poon Hill',
+      url: '/treks/ghorepani-poon-hill-trek',
+      duration: '4-5 Days',
+      altitude: '3,210m',
+      badge: 'Popular',
+      category: 'Poon Hill',
+      keywords: 'poon hill ghorepani sunrise dhaulagiri panoramic easy family rhododendron'
+    },
+    {
+      title: '3 Days Poon Hill Express Trek',
+      shortTitle: '3 Days Poon Hill',
+      url: '/treks/3-days-poon-hill-trek',
+      duration: '3 Days',
+      altitude: '3,210m',
+      badge: '3 Days',
+      category: 'Poon Hill',
+      keywords: '3 days poon hill ulleri ghorepani quick weekend'
+    },
+    {
+      title: '4 Days Poon Hill Trek',
+      shortTitle: '4 Days Poon Hill',
+      url: '/treks/4-days-poon-hill-trek',
+      duration: '4 Days',
+      altitude: '3,210m',
+      badge: '4 Days',
+      category: 'Poon Hill',
+      keywords: '4 days poon hill ghorepani gandruk pokhara'
+    },
+    {
+      title: '5 Days Poon Hill & Ghandruk Trek',
+      shortTitle: '5 Days Poon Hill',
+      url: '/treks/5-days-poon-hill-trek',
+      duration: '5 Days',
+      altitude: '3,210m',
+      badge: '5 Days',
+      category: 'Poon Hill',
+      keywords: '5 days poon hill ghandruk heritage loop cultural'
+    },
+    {
+      title: 'Mardi Himal High Ridge Trek',
+      shortTitle: 'Mardi Himal Trek',
+      url: '/treks/mardi-himal-trek',
+      duration: '5-6 Days',
+      altitude: '4,500m',
+      badge: 'Ridge Trek',
+      category: 'Mardi Himal',
+      keywords: 'mardi himal fishtail machapuchare high camp forest camp ridge view'
+    },
+    {
+      title: 'Khopra Ridge (Khopra Danda) & Khayer Lake',
+      shortTitle: 'Khopra Ridge Trek',
+      url: '/treks/khopra-ridge-trek',
+      duration: '8-9 Days',
+      altitude: '4,660m',
+      badge: 'Panoramic',
+      category: 'Remote',
+      keywords: 'khopra danda ridge khayer sacred lake off the beaten path panoramic'
+    },
+    {
+      title: 'Nar Phu Valley Restricted Wilderness Trek',
+      shortTitle: 'Nar Phu Valley Trek',
+      url: '/treks/nar-phu-valley-trek',
+      duration: '9-11 Days',
+      altitude: '5,320m',
+      badge: 'Restricted',
+      category: 'Remote',
+      keywords: 'nar phu tibetan culture remote restricted kang la pass wild'
+    },
+    {
+      title: 'Panchase Eco & Cultural Trek',
+      shortTitle: 'Panchase Trek',
+      url: '/treks/panchase-trek',
+      duration: '3-4 Days',
+      altitude: '2,065m',
+      badge: 'Eco-Walk',
+      category: 'Scenic',
+      keywords: 'panchase eco easy family peaceful forest pokhara'
+    },
+    {
+      title: 'Sikles Gurung Heritage Trek',
+      shortTitle: 'Sikles Trek',
+      url: '/treks/sikles-trek',
+      duration: '4-5 Days',
+      altitude: '2,000m',
+      badge: 'Gurung Lore',
+      category: 'Cultural',
+      keywords: 'sikles gurung cultural village heritage kapuche glacier lake'
+    },
+    {
+      title: 'Jomsom Muktinath Pilgrimage Trek',
+      shortTitle: 'Jomsom Muktinath',
+      url: '/treks/jomsom-muktinath-trek-with-poon-hill',
+      duration: '7-8 Days',
+      altitude: '3,760m',
+      badge: 'Pilgrimage',
+      category: 'Cultural',
+      keywords: 'jomsom muktinath kali gandaki temple pilgrimage windy valley'
+    },
+    {
+      title: 'Annapurna View Scenic Panorama Trek',
+      shortTitle: 'Annapurna View Trek',
+      url: '/treks/annapurna-view-trek',
+      duration: '5-6 Days',
+      altitude: '3,210m',
+      badge: 'Scenic',
+      category: 'Scenic',
+      keywords: 'annapurna view sunrise scenic mountain photography'
+    }
+  ];
+
+  function initTripSearch() {
+    const searchInput = document.getElementById('tripSearchInput');
+    const searchDropdown = document.getElementById('searchDropdown');
+    const clearBtn = document.getElementById('searchClearBtn');
+    const submitBtn = document.getElementById('searchSubmitBtn');
+    const wrapper = document.getElementById('heroSearchWrapper');
+
+    if (!searchInput || !searchDropdown) return;
+
+    let activeIndex = -1;
+    let currentResults = [];
+
+    function renderDropdown(items, isDefault) {
+      currentResults = items;
+      activeIndex = -1;
+
+      if (!items || items.length === 0) {
+        searchDropdown.innerHTML = `
+          <div class="search-no-results">
+            <p>No routes found matching "<strong>${escapeHtml(searchInput.value)}</strong>".</p>
+            <a href="/treks" style="color: #F59E0B; font-weight: 700; text-decoration: none; margin-top: 6px; display: inline-block;">
+              Browse all 18 Annapurna expeditions &rarr;
+            </a>
+          </div>
+        `;
+        searchDropdown.style.display = 'block';
+        return;
+      }
+
+      const headerTitle = isDefault ? 'Featured & Popular Expeditions' : `Matching Routes (${items.length})`;
+      let html = `<div class="search-dropdown-header"><span>${headerTitle}</span><span>18 Routes Total</span></div>`;
+
+      items.forEach(function (trek, idx) {
+        const isFlagship = trek.badge === 'Flagship';
+        const badgeClass = isFlagship ? 'search-item-badge flagship' : 'search-item-badge';
+        html += `
+          <a href="${trek.url}" class="search-dropdown-item" data-index="${idx}" role="option">
+            <div class="search-item-title-group">
+              <span class="search-item-title">${escapeHtml(trek.title)}</span>
+              <div class="search-item-meta">
+                <span class="${badgeClass}">${trek.badge}</span>
+                <span>${trek.duration}</span>
+                <span>${trek.altitude}</span>
+              </div>
+            </div>
+            <span class="search-item-arrow">&rarr;</span>
+          </a>
+        `;
+      });
+
+      html += `
+        <div style="padding: 8px 20px; background: #F8FAFC; border-top: 1px solid #F1F5F9; text-align: center;">
+          <a href="/treks" style="font-size: 0.75rem; font-weight: 700; color: #081B3A; text-decoration: none;">
+            View Complete 18-Trek Directory &rarr;
+          </a>
+        </div>
+      `;
+
+      searchDropdown.innerHTML = html;
+      searchDropdown.style.display = 'block';
+    }
+
+    function searchTrips(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) {
+        // Show top 5 recommended routes by default
+        const defaultTrips = [
+          ALL_TREKS[0], // 10-day ABC
+          ALL_TREKS[3], // Circuit
+          ALL_TREKS[7], // Poon Hill
+          ALL_TREKS[11], // Mardi Himal
+          ALL_TREKS[1]  // 8-day ABC
+        ];
+        renderDropdown(defaultTrips, true);
+        return;
+      }
+
+      const matches = ALL_TREKS.filter(function (t) {
+        return (
+          t.title.toLowerCase().includes(q) ||
+          t.shortTitle.toLowerCase().includes(q) ||
+          t.keywords.toLowerCase().includes(q) ||
+          t.category.toLowerCase().includes(q) ||
+          t.duration.toLowerCase().includes(q) ||
+          t.altitude.toLowerCase().includes(q)
+        );
+      });
+
+      renderDropdown(matches, false);
+    }
+
+    function updateActiveItem(direction) {
+      const items = searchDropdown.querySelectorAll('.search-dropdown-item');
+      if (!items || items.length === 0) return;
+
+      if (direction === 'down') {
+        activeIndex = (activeIndex + 1) % items.length;
+      } else if (direction === 'up') {
+        activeIndex = (activeIndex - 1 + items.length) % items.length;
+      }
+
+      items.forEach(function (el, i) {
+        if (i === activeIndex) {
+          el.classList.add('active');
+          el.scrollIntoView({ block: 'nearest' });
+        } else {
+          el.classList.remove('active');
+        }
+      });
+    }
+
+    // Input events
+    searchInput.addEventListener('input', function () {
+      const val = this.value;
+      if (clearBtn) {
+        clearBtn.style.display = val.length > 0 ? 'inline-block' : 'none';
+      }
+      searchTrips(val);
+    });
+
+    searchInput.addEventListener('focus', function () {
+      searchTrips(this.value);
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        this.style.display = 'none';
+        searchTrips('');
+        searchInput.focus();
+      });
+    }
+
+    if (submitBtn) {
+      submitBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (activeIndex >= 0 && currentResults[activeIndex]) {
+          window.location.href = currentResults[activeIndex].url;
+        } else if (currentResults.length > 0) {
+          window.location.href = currentResults[0].url;
+        } else {
+          window.location.href = '/treks';
+        }
+      });
+    }
+
+    // Keyboard navigation
+    searchInput.addEventListener('keydown', function (e) {
+      if (searchDropdown.style.display === 'none') return;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        updateActiveItem('down');
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        updateActiveItem('up');
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (activeIndex >= 0 && currentResults[activeIndex]) {
+          window.location.href = currentResults[activeIndex].url;
+        } else if (currentResults.length > 0) {
+          window.location.href = currentResults[0].url;
+        } else {
+          window.location.href = '/treks';
+        }
+      } else if (e.key === 'Escape') {
+        searchDropdown.style.display = 'none';
+      }
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (wrapper && !wrapper.contains(e.target)) {
+        searchDropdown.style.display = 'none';
+      }
+    });
+
+    function escapeHtml(str) {
+      return (str || '').replace(/[&<>"']/g, function (m) {
+        return {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#039;'
+        }[m];
+      });
+    }
+
+    // Test hook for headless visual verification
+    if (window.location.hash === '#test-search') {
+      searchInput.value = 'poon';
+      clearBtn.style.display = 'inline-block';
+      searchTrips('poon');
+    }
+
+    console.log('[TripSearch] Initialized with 18 Annapurna routes');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTripSearch);
+  } else {
+    initTripSearch();
+  }
+})();
+
   </script>
 </body>
 </html>
