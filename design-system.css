@@ -1,0 +1,403 @@
+/* ==========================================================================
+   ABC TREK IN NEPAL (abctrekinnepal.com)
+   CORE DESIGN SYSTEM & VISUAL TOKENS
+   Version: 1.0.0
+   ========================================================================== */
+
+/* @import Google Fonts: Inter (Precision Modern UI & Editorial) & JetBrains Mono (Telemetry) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- 1. DESIGN TOKENS & CSS CUSTOM PROPERTIES --- */
+:root {
+  /* Core Brand Colors */
+  --color-bg: #FFFFFF;
+  --color-brand-dark: #0F2D5C;
+  --color-brand-dark-deep: #081B3A;
+  --color-brand-dark-surface: #143870;
+  --color-brand-dark-tint: #EEF4FA;
+  
+  /* Primary Action / Kinetic Accent */
+  --color-accent: #F97316;
+  --color-accent-hover: #EA580C;
+  --color-accent-active: #C2410C;
+  --color-accent-subtle: #FFF7ED;
+  --color-accent-border: #FDBA74;
+
+  /* Editorial Neutrals & Slate Hierarchy */
+  --color-surface-pure: #FFFFFF;
+  --color-surface-subtle: #F8FAFC;
+  --color-surface-muted: #F1F5F9;
+  --color-surface-card: #FFFFFF;
+  
+  --color-border-subtle: #E2E8F0;
+  --color-border-medium: #CBD5E1;
+  --color-border-dark: #0F2D5C;
+
+  /* Typography Colors */
+  --color-text-headline: #0F2D5C;
+  --color-text-body: #1E293B;
+  --color-text-muted: #475569;
+  --color-text-light: #64748B;
+  --color-text-inverse: #FFFFFF;
+  --color-text-inverse-muted: #CBD5E1;
+
+  /* Semantic Feedback & Trail Data */
+  --color-success: #059669;
+  --color-success-bg: #ECFDF5;
+  --color-success-border: #A7F3D0;
+
+  --color-warning: #D97706;
+  --color-warning-bg: #FFFBEB;
+  --color-warning-border: #FDE68A;
+
+  --color-danger: #DC2626;
+  --color-danger-bg: #FEF2F2;
+  --color-danger-border: #FECACA;
+
+  --color-altitude-low: #059669;
+  --color-altitude-mid: #0284C7;
+  --color-altitude-high: #D97706;
+  --color-altitude-extreme: #DC2626;
+
+  /* Typography Families */
+  --font-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Type Scale & Hierarchy */
+  --text-display-xl: 3.75rem;   /* 60px */
+  --text-display-lg: 3.00rem;   /* 48px */
+  --text-display-md: 2.25rem;   /* 36px */
+  --text-h1: 2.25rem;           /* 36px */
+  --text-h2: 1.875rem;          /* 30px */
+  --text-h3: 1.50rem;           /* 24px */
+  --text-h4: 1.25rem;           /* 20px */
+  --text-h5: 1.125rem;          /* 18px */
+  --text-body-lg: 1.125rem;     /* 18px */
+  --text-body: 1.00rem;         /* 16px */
+  --text-body-sm: 0.875rem;     /* 14px */
+  --text-caption: 0.75rem;      /* 12px */
+  --text-telemetry: 0.8125rem;   /* 13px */
+
+  /* Line Heights */
+  --lh-tight: 1.15;
+  --lh-heading: 1.25;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-eyebrow: 0.12em;
+
+  /* Spacing Scale (8pt Grid) */
+  --space-2: 0.125rem;  /* 2px */
+  --space-4: 0.25rem;   /* 4px */
+  --space-6: 0.375rem;  /* 6px */
+  --space-8: 0.5rem;    /* 8px */
+  --space-10: 0.625rem; /* 10px */
+  --space-12: 0.75rem;  /* 12px */
+  --space-16: 1rem;     /* 16px */
+  --space-20: 1.25rem;  /* 20px */
+  --space-24: 1.5rem;   /* 24px */
+  --space-28: 1.75rem;  /* 28px */
+  --space-32: 2rem;     /* 32px */
+  --space-40: 2.5rem;   /* 40px */
+  --space-48: 3rem;     /* 48px */
+  --space-64: 4rem;     /* 64px */
+  --space-80: 5rem;     /* 80px */
+  --space-96: 6rem;     /* 96px */
+  --space-128: 8rem;    /* 128px */
+
+  /* Container Widths */
+  --container-max: 1320px;
+  --container-reading: 780px;
+  --container-narrow: 980px;
+
+  /* Radius (Restrained & Architectural - NO excessive pills/bubbly curves) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px; /* Reserved exclusively for small status dots and telemetry badges */
+
+  /* Shadows (Subtle, Atmospheric, Non-Muddy) */
+  --shadow-subtle: 0 1px 3px rgba(15, 45, 92, 0.05);
+  --shadow-card: 0 4px 16px -2px rgba(15, 45, 92, 0.06), 0 2px 6px -1px rgba(15, 45, 92, 0.03);
+  --shadow-elevated: 0 12px 32px -4px rgba(15, 45, 92, 0.10), 0 4px 12px -2px rgba(15, 45, 92, 0.05);
+  --shadow-modal: 0 24px 60px -8px rgba(15, 45, 92, 0.22);
+  --shadow-glow-orange: 0 4px 18px rgba(249, 115, 22, 0.28);
+  /* Semantic Shadow Aliases */
+  --shadow-sm: var(--shadow-subtle);
+  --shadow-md: var(--shadow-card);
+  --shadow-lg: var(--shadow-elevated);
+
+  /* Transitions & Micro-Interactions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: var(--transition-normal);
+
+  /* Typography Aliases */
+  --text-body-md: var(--text-body);
+
+  /* Color Aliases */
+  --color-text-main: var(--color-text-body);
+  --color-brand-navy: var(--color-brand-dark);
+
+  /* Z-Index Hierarchy */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-header: 500;
+  --z-modal-backdrop: 900;
+  --z-mobile-drawer: 1000;
+  --z-modal: 1100;
+}
+
+/* --- 2. CSS RESET & EDITORIAL BASE DEFAULTS --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--lh-normal);
+  color: var(--color-text-body);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--color-text-headline);
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1, .font-display-xl {
+  font-family: var(--font-sans);
+  font-size: var(--text-display-lg);
+  font-weight: 700;
+}
+
+h2, .font-display-md {
+  font-family: var(--font-sans);
+  font-size: var(--text-h2);
+  font-weight: 700;
+}
+
+h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h3);
+  font-weight: 700;
+}
+
+h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h4);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: var(--space-16);
+  color: var(--color-text-body);
+}
+
+p.lead {
+  font-size: var(--text-body-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-muted);
+}
+
+a {
+  color: var(--color-brand-dark);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Accessible Focus States (Never remove focus rings without replacing) */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Images & Media */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Base Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-24);
+  padding-right: var(--space-24);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-24);
+  padding-right: var(--space-24);
+}
+
+.container-reading {
+  width: 100%;
+  max-width: var(--container-reading);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-24);
+  padding-right: var(--space-24);
+}
+
+@media (max-width: 640px) {
+  .container,
+  .container-narrow,
+  .container-reading {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Section Spacing System */
+.section {
+  padding-top: var(--space-80);
+  padding-bottom: var(--space-80);
+  position: relative;
+}
+
+.section-sm {
+  padding-top: var(--space-48);
+  padding-bottom: var(--space-48);
+}
+
+.section-dark {
+  background-color: var(--color-brand-dark);
+  color: var(--color-text-inverse);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: var(--color-text-inverse);
+}
+
+.section-dark p {
+  color: var(--color-text-inverse-muted);
+}
+
+.section-tint {
+  background-color: var(--color-brand-dark-tint);
+}
+
+.section-subtle {
+  background-color: var(--color-surface-subtle);
+}
+
+/* Section Header Editorial Pattern */
+.section-header {
+  margin-bottom: var(--space-48);
+}
+
+.section-header.text-center {
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-eyebrow);
+  color: var(--color-accent);
+  margin-bottom: var(--space-8);
+}
+
+.section-title {
+  margin-bottom: var(--space-16);
+}
+
+.section-subtitle {
+  font-size: var(--text-body-lg);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+  max-width: 680px;
+}
+
+.section-dark .section-subtitle {
+  color: var(--color-text-inverse-muted);
+}
+
+/* Utility Helpers */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.font-mono { font-family: var(--font-mono); }
+.font-serif { font-family: var(--font-serif); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive Fluid Typography */
+@media (min-width: 1024px) {
+  :root {
+    --text-display-xl: 4.25rem;
+    --text-display-lg: 3.50rem;
+    --text-h1: 2.75rem;
+    --text-h2: 2.25rem;
+  }
+}
+
+/* Fail-safe logo dimensions */
+.brand-logo-img { width: 44px !important; height: 44px !important; max-width: 44px !important; max-height: 44px !important; object-fit: contain; border-radius: 50%; display: block; }
+
+/* High contrast footer links fallback */
+.site-footer a { color: #CBD5E1; }
+.site-footer a:hover { color: #F97316; }
