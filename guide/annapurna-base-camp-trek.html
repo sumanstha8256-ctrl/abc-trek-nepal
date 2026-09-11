@@ -470,9 +470,6 @@
             <a href="/blog" class="nav-link">Blog</a>
           </div>
           <div class="nav-item">
-            <a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="nav-link">Safety & Ethics</a>
-          </div>
-          <div class="nav-item">
             <a href="/company/about-us" class="nav-link">About Us</a>
           </div>
           <div class="nav-item">
@@ -539,7 +536,6 @@
         </li>
         <li><a href="/guide/annapurna-base-camp-trek" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
         <li><a href="/blog" class="mobile-nav-link"><span>Annapurna Trekking Blog</span></a></li>
-        <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
         <li><a href="/company/about-us" class="mobile-nav-link"><span>About Our Specialists</span></a></li>
         <li><a href="/company/contact" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
       </ul>
@@ -1508,7 +1504,33 @@
 
       <!-- Right Column: Quick Navigation & Commercial Action -->
       <aside>
-        <div class="booking-card" style="position: sticky; top: 100px;">
+        <!-- Sticky Sidebar Table of Contents -->
+        <div class="sidebar-toc" id="sidebarToc">
+          <div class="sidebar-toc-header">
+            <span class="sidebar-toc-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              Table of Contents
+            </span>
+            <span class="sidebar-toc-badge">13 Sections</span>
+          </div>
+          <ul class="sidebar-toc-list" id="sidebarTocList">
+            <li><a href="#at-a-glance" class="sidebar-toc-link"><span class="sidebar-toc-num">01</span><span>At a Glance</span></a></li>
+            <li><a href="#what-is-abc" class="sidebar-toc-link"><span class="sidebar-toc-num">02</span><span>What Is ABC?</span></a></li>
+            <li><a href="#route-elevation" class="sidebar-toc-link"><span class="sidebar-toc-num">03</span><span>Route &amp; Elevation</span></a></li>
+            <li><a href="#itinerary" class="sidebar-toc-link"><span class="sidebar-toc-num">04</span><span>Classic Itinerary</span></a></li>
+            <li><a href="#difficulty" class="sidebar-toc-link"><span class="sidebar-toc-num">05</span><span>Trek Difficulty</span></a></li>
+            <li><a href="#best-time" class="sidebar-toc-link"><span class="sidebar-toc-num">06</span><span>Best Seasons</span></a></li>
+            <li><a href="#weather" class="sidebar-toc-link"><span class="sidebar-toc-num">07</span><span>Weather &amp; Climate</span></a></li>
+            <li><a href="#acclimatization" class="sidebar-toc-link"><span class="sidebar-toc-num">08</span><span>Acclimatization</span></a></li>
+            <li><a href="#cost" class="sidebar-toc-link"><span class="sidebar-toc-num">09</span><span>Real Costs &amp; Budget</span></a></li>
+            <li><a href="#permits" class="sidebar-toc-link"><span class="sidebar-toc-num">10</span><span>Permits &amp; Rules</span></a></li>
+            <li><a href="#packing" class="sidebar-toc-link"><span class="sidebar-toc-num">11</span><span>Packing Essentials</span></a></li>
+            <li><a href="#comparisons" class="sidebar-toc-link"><span class="sidebar-toc-num">12</span><span>Route Comparisons</span></a></li>
+            <li><a href="#faq" class="sidebar-toc-link"><span class="sidebar-toc-num">13</span><span>Expedition FAQs</span></a></li>
+          </ul>
+        </div>
+
+        <div class="booking-card" style="margin-top: var(--space-24);">
           <span class="eyebrow" style="margin-bottom: 4px;">Ready to Trek?</span>
           <h3 style="font-size: 1.25rem; margin-bottom: var(--space-12);">The 10-Day Classic Sanctuary</h3>
           <p style="font-size: var(--text-caption); color: var(--color-text-muted); margin-bottom: var(--space-16);">
@@ -1574,7 +1596,6 @@
             <li><a href="/guide/annapurna-base-camp-trek" class="footer-link">Ultimate ABC Guide (2026)</a></li>
             <li><a href="/guide/annapurna-base-camp-trek-september" class="footer-link">ABC Trek in September</a></li>
             <li><a href="/blog" class="footer-link">Annapurna Field Blog</a></li>
-            <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="footer-link">Altitude Sickness Science</a></li>
             <li><a href="#packing" class="footer-link">Complete Packing Checklist</a></li>
             <li><a href="#permits" class="footer-link">2026 ACAP Permits &amp; Rules</a></li>
           </ul>
@@ -1583,7 +1604,6 @@
         <div>
           <div class="footer-col-title">Trust &amp; Support</div>
           <ul class="footer-links">
-            <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="footer-link">Medical Protocols &amp; Rescue</a></li>
             <li><a href="/company/about-us" class="footer-link">About Our Mountain Team</a></li>
             <li><a href="/company/contact" class="footer-link">Contact Operations Base</a></li>
             <li><a href="/plan-your-trek" class="footer-link">Interactive Trip Builder</a></li>
@@ -1618,5 +1638,35 @@
 
   <!-- Global Navigation Scripts -->
   <script src="/js/nav.js?v=2.6" defer></script>
+  <script>
+    // ScrollSpy for Sticky Sidebar Table of Contents
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('article section[id]');
+      const navLinks = document.querySelectorAll('.sidebar-toc-link');
+      if (!sections.length || !navLinks.length) return;
+
+      function updateActiveToc() {
+        const scrollPosition = window.scrollY + 140;
+        let activeId = '';
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            activeId = section.getAttribute('id');
+          }
+        });
+        if (activeId) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + activeId) {
+              link.classList.add('active');
+            }
+          });
+        }
+      }
+      window.addEventListener('scroll', updateActiveToc, { passive: true });
+      updateActiveToc();
+    });
+  </script>
 </body>
 </html>
