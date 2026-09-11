@@ -52,8 +52,71 @@
   }
   </script>
 
+  
+
+  
+
+  
+
   <!-- Self-Contained Standalone Hero & Navigation Styling -->
   <style id="standalone-hero-styles">
+/* Base normalization for all header action buttons: uniform height, typography & alignment */
+.header-actions .btn,
+.header-actions .btn-top-treks,
+.header-actions .header-whatsapp-pill {
+  height: 38px;
+  min-height: 38px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  margin: 0;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+
+
+/* Dark Header Adaptation for Homepage Hero */
+.site-header.hero-header-dark {
+  background: rgba(8, 27, 58, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-normal, 0.3s ease);
+}
+
+.site-header.hero-header-dark .brand-name {
+  color: #FFFFFF;
+}
+
+.site-header.hero-header-dark .brand-tagline {
+  color: #F59E0B;
+}
+
+.site-header.hero-header-dark .nav-link {
+  color: #F1F5F9;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  padding: 8px 4px;
+}
+
+.site-header.hero-header-dark .nav-link:hover,
+.site-header.hero-header-dark .nav-link.active {
+  color: #F59E0B;
+}
+
+.site-header.hero-header-dark .nav-chevron {
+  stroke: currentColor;
+}
+
 /* Highlighted "Top Treks" Header Button */
 .btn-top-treks {
   gap: 6px;
@@ -90,6 +153,23 @@
   color: #081B3A !important;
 }
 
+/* White / Light Header Contrast Override */
+.site-header:not(.hero-header-dark) .btn-top-treks {
+  color: #B45309;
+  border-color: rgba(217, 119, 6, 0.45);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.site-header:not(.hero-header-dark) .btn-top-treks:hover {
+  background: #F59E0B;
+  color: #FFFFFF;
+  border-color: #F59E0B;
+}
+
+.site-header:not(.hero-header-dark) .btn-top-treks:hover svg {
+  color: #FFFFFF !important;
+}
+
 /* Header Direct WhatsApp Contact Pill */
 .header-whatsapp-pill {
   gap: 6px;
@@ -117,6 +197,19 @@
 
 .header-whatsapp-pill svg {
   flex-shrink: 0;
+}
+
+/* White / Light Header Contrast Override */
+.site-header:not(.hero-header-dark) .header-whatsapp-pill {
+  color: #15803D;
+  border-color: rgba(34, 197, 94, 0.45);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.site-header:not(.hero-header-dark) .header-whatsapp-pill:hover {
+  background: #22C55E;
+  color: #FFFFFF;
+  border-color: #22C55E;
 }
 
 /* Primary CTA Button in Header */
@@ -1706,6 +1799,12 @@
       };
     })();
   </script>
+
+  
+
+  
+
+  
 
   <!-- Self-Contained 18-Trek Instant Search Engine -->
   <script id="inline-trip-search">
