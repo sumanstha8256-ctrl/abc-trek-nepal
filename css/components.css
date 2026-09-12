@@ -1978,7 +1978,7 @@
 }
 
 /* ==========================================================================
-   BLOG & EDITORIAL ARTICLE LAYOUTS (STICKY SIDEBAR FOR ALL PRESENT & FUTURE BLOGS)
+   BLOG & EDITORIAL ARTICLE LAYOUTS (STABLE STICKY SIDEBAR FOR ALL BLOGS)
    ========================================================================== */
 .guide-layout-grid,
 .blog-layout-grid,
@@ -1988,6 +1988,7 @@
   display: grid;
   grid-template-columns: 1fr 340px;
   gap: var(--space-48);
+  align-items: start;
 }
 
 .guide-layout-grid > aside,
@@ -2000,39 +2001,14 @@ aside.guide-sidebar,
 aside.sticky-reading-sidebar {
   position: -webkit-sticky;
   position: sticky;
-  top: 96px;
+  top: 92px;
   align-self: start;
-  max-height: calc(100vh - 115px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-border-subtle) transparent;
+  z-index: 20;
+  width: 100%;
+  max-width: 340px;
   display: flex;
   flex-direction: column;
   gap: var(--space-20);
-}
-
-.guide-layout-grid > aside::-webkit-scrollbar,
-.blog-layout-grid > aside::-webkit-scrollbar,
-.blog-article-grid > aside::-webkit-scrollbar,
-.blog-layout > aside::-webkit-scrollbar,
-.editorial-layout-grid > aside::-webkit-scrollbar,
-aside.blog-sidebar::-webkit-scrollbar,
-aside.guide-sidebar::-webkit-scrollbar,
-aside.sticky-reading-sidebar::-webkit-scrollbar {
-  width: 5px;
-}
-
-.guide-layout-grid > aside::-webkit-scrollbar-thumb,
-.blog-layout-grid > aside::-webkit-scrollbar-thumb,
-.blog-article-grid > aside::-webkit-scrollbar-thumb,
-.blog-layout > aside::-webkit-scrollbar-thumb,
-.editorial-layout-grid > aside::-webkit-scrollbar-thumb,
-aside.blog-sidebar::-webkit-scrollbar-thumb,
-aside.guide-sidebar::-webkit-scrollbar-thumb,
-aside.sticky-reading-sidebar::-webkit-scrollbar-thumb {
-  background: var(--color-border-subtle);
-  border-radius: 4px;
 }
 
 /* Ensure child widgets inside blog sidebars do not conflict with parent stickiness */
@@ -2046,22 +2022,6 @@ aside.guide-sidebar .sidebar-toc,
 aside.sticky-reading-sidebar .sidebar-toc {
   position: static !important;
   top: auto !important;
-  max-height: none !important;
-  overflow-y: visible !important;
-  margin-bottom: 0 !important;
-}
-
-.guide-layout-grid > aside .booking-card,
-.blog-layout-grid > aside .booking-card,
-.blog-article-grid > aside .booking-card,
-.blog-layout > aside .booking-card,
-.editorial-layout-grid > aside .booking-card,
-aside.blog-sidebar .booking-card,
-aside.guide-sidebar .booking-card,
-aside.sticky-reading-sidebar .booking-card {
-  position: static !important;
-  top: auto !important;
-  margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
@@ -3709,27 +3669,31 @@ aside.sticky-reading-sidebar .booking-card {
   background: var(--color-surface-pure);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
-  padding: var(--space-20);
+  padding: var(--space-16);
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .sidebar-toc-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: var(--space-12);
-  border-bottom: 2px solid var(--color-border-subtle);
-  margin-bottom: var(--space-12);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
 .sidebar-toc-title {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.8125rem;
+  gap: 6px;
+  font-size: 0.78125rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: var(--color-brand-dark);
 }
 
@@ -3738,7 +3702,7 @@ aside.sticky-reading-sidebar .booking-card {
   font-weight: 700;
   background: var(--color-brand-dark-tint);
   color: var(--color-accent);
-  padding: 2px 8px;
+  padding: 2px 7px;
   border-radius: var(--radius-full);
 }
 
@@ -3748,20 +3712,34 @@ aside.sticky-reading-sidebar .booking-card {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-subtle) transparent;
+}
+
+.sidebar-toc-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-toc-list::-webkit-scrollbar-thumb {
+  background: var(--color-border-subtle);
+  border-radius: 4px;
 }
 
 .sidebar-toc-link {
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 6px 10px;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 8px;
   border-radius: var(--radius-sm);
-  font-size: 0.84rem;
+  font-size: 0.8125rem;
   color: var(--color-text-body);
   text-decoration: none;
-  line-height: 1.4;
-  transition: all var(--transition-base);
+  line-height: 1.35;
+  transition: all var(--transition-base, 0.15s ease);
   border-left: 2px solid transparent;
 }
 
@@ -3769,22 +3747,71 @@ aside.sticky-reading-sidebar .booking-card {
   background: var(--color-surface-subtle);
   color: var(--color-accent);
   border-left-color: var(--color-accent);
-  padding-left: 12px;
+  padding-left: 10px;
 }
 
 .sidebar-toc-link.active {
-  background: rgba(245, 158, 11, 0.1);
+  background: rgba(245, 158, 11, 0.12);
   color: #B45309;
   font-weight: 700;
   border-left-color: var(--color-accent);
 }
 
 .sidebar-toc-num {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--color-text-muted);
   min-width: 18px;
-  line-height: 1.4;
+  line-height: 1;
+}
+
+/* Sleek Integrated Sidebar Action / Footer */
+.sidebar-toc-footer {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.sidebar-toc-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--color-brand-dark-tint);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+}
+
+.sidebar-toc-cta-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.sidebar-toc-cta-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+}
+
+.sidebar-toc-cta-price {
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.sidebar-toc-cta-btn {
+  padding: 5px 10px !important;
+  font-size: 0.75rem !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+}
+
+/* Ensure smooth section scrolling target offset so fixed header doesn't cover headings */
+article section[id] {
+  scroll-margin-top: 108px;
 }
 
 /* Featured Image Banner in Editorial Articles */
