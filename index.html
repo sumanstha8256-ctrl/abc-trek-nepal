@@ -58,6 +58,8 @@
 
   
 
+  
+
   <!-- Self-Contained Standalone Hero & Navigation Styling -->
   <style id="standalone-hero-styles">
 /* Base normalization for all header action buttons: uniform height, typography & alignment */
@@ -760,14 +762,31 @@
 
 @media (max-width: 768px) {
   .hero-cinematic {
-    min-height: auto;
-    padding-top: 30px;
+    min-height: auto !important;
+    padding-top: clamp(84px, 14vw, 110px) !important;
+    padding-bottom: 28px !important;
+  }
+  .hero-video-badge {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 0 auto 16px auto !important;
+    display: inline-flex !important;
+    align-self: center !important;
   }
   .hero-cinematic-center {
-    padding: 20px 16px;
+    padding: 10px 16px 20px !important;
+    margin-top: 0 !important;
+  }
+  .hero-cinematic-title {
+    margin-top: 0 !important;
+    margin-bottom: 6px !important;
+    font-size: clamp(1.15rem, 3.5vw, 1.45rem) !important;
   }
   .hero-cinematic-keyword {
-    font-size: 2.75rem;
+    font-size: clamp(2.1rem, 6.5vw, 2.75rem) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 14px !important;
   }
   .hero-search-bar {
     padding: 4px 6px 4px 16px;
@@ -1018,9 +1037,6 @@
             <a href="/blog" class="nav-link">Blog</a>
           </div>
           <div class="nav-item">
-            <a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="nav-link">Safety & Ethics</a>
-          </div>
-          <div class="nav-item">
             <a href="/company/about-us" class="nav-link">About Us</a>
           </div>
           <div class="nav-item">
@@ -1088,7 +1104,6 @@
         </li>
         <li><a href="/guide/annapurna-base-camp-trek" class="mobile-nav-link"><span>Trek Planning Guide</span></a></li>
         <li><a href="/blog" class="mobile-nav-link"><span>Annapurna Trekking Blog</span></a></li>
-        <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="mobile-nav-link"><span>Safety & Ethics</span></a></li>
         <li><a href="/company/about-us" class="mobile-nav-link"><span>About Our Specialists</span></a></li>
         <li><a href="/company/contact" class="mobile-nav-link"><span>Contact Mountain Operations</span></a></li>
       </ul>
@@ -1687,7 +1702,6 @@
             <li><a href="/blog" class="footer-link">Annapurna Field Blog</a></li>
             <li><a href="/guide/annapurna-base-camp-trek#seasons" class="footer-link">Best Time & Weather Matrix</a></li>
             <li><a href="/guide/annapurna-base-camp-trek#packing" class="footer-link">Complete Packing Checklist</a></li>
-            <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="footer-link">Altitude Sickness Prevention</a></li>
             <li><a href="/guide/annapurna-base-camp-trek#permits" class="footer-link">2026 ACAP Permits & Rules</a></li>
             <li><a href="/guide/annapurna-base-camp-trek#teahouses" class="footer-link">Teahouse Living Realities</a></li>
           </ul>
@@ -1697,8 +1711,6 @@
         <div>
           <div class="footer-col-title">Trust & Dispatch</div>
           <ul class="footer-links">
-            <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation" class="footer-link">Medical Safety & Evacuation</a></li>
-            <li><a href="/safety-ethics/high-altitude-medical-protocols-evacuation#porters" class="footer-link">Porter Welfare Charter (IPPG)</a></li>
             <li><a href="/company/about-us" class="footer-link">About Our Specialists</a></li>
             <li><a href="/company/contact" class="footer-link">Contact Operations Team</a></li>
             <li><a href="/plan-your-trek" class="footer-link">Interactive Trip Builder</a></li>
@@ -1799,6 +1811,8 @@
       };
     })();
   </script>
+
+  
 
   
 

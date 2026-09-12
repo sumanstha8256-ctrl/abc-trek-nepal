@@ -714,6 +714,16 @@
   transform: translateY(-1px);
 }
 
+@media (max-width: 640px) {
+  .btn:not(.header-actions .btn) {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
+    box-sizing: border-box;
+  }
+}
+
 .btn-primary:active {
   background-color: var(--color-accent-active);
   transform: translateY(0);
@@ -2028,6 +2038,20 @@ aside.sticky-reading-sidebar .booking-card {
   align-items: start;
 }
 
+.guide-layout-grid > article,
+.blog-layout-grid > article,
+.blog-article-grid > article,
+.blog-layout > article,
+.editorial-layout-grid > article,
+.detail-layout-grid > article {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 @media (max-width: 1024px) {
   .detail-layout-grid,
   .guide-layout-grid,
@@ -2038,6 +2062,9 @@ aside.sticky-reading-sidebar .booking-card {
   .contact-layout-grid {
     grid-template-columns: 1fr;
     gap: var(--space-32);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .guide-layout-grid > aside,
@@ -2891,17 +2918,26 @@ aside.sticky-reading-sidebar .booking-card {
 /* Mobile Responsiveness for Floating Actions */
 @media (max-width: 768px) {
   .floating-actions {
-    bottom: 84px;
-    right: 16px;
-    gap: 10px;
+    bottom: 74px;
+    right: 12px;
+    gap: 8px;
+    z-index: 700;
   }
   .btn-floating {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 4px 12px rgba(15, 45, 92, 0.25);
   }
   .btn-floating svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+  }
+  .guide-layout-grid > article,
+  .blog-layout-grid > article,
+  .blog-article-grid > article,
+  .blog-layout > article,
+  .editorial-layout-grid > article {
+    padding-bottom: 72px;
   }
 }
 
@@ -3589,13 +3625,30 @@ aside.sticky-reading-sidebar .booking-card {
 @media (max-width: 768px) {
   .hero-cinematic {
     min-height: auto;
-    padding-top: 30px;
+    padding-top: clamp(84px, 14vw, 110px);
+    padding-bottom: 28px;
+  }
+  .hero-video-badge {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 0 auto 16px auto !important;
+    display: inline-flex !important;
+    align-self: center !important;
   }
   .hero-cinematic-center {
-    padding: 20px 16px;
+    padding: 10px 16px 20px;
+    margin-top: 0;
+  }
+  .hero-cinematic-title {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: clamp(1.15rem, 3.5vw, 1.45rem);
   }
   .hero-cinematic-keyword {
-    font-size: 2.75rem;
+    font-size: clamp(2.1rem, 6.5vw, 2.75rem);
+    line-height: 1.12;
+    margin-bottom: 14px;
   }
   .hero-search-bar {
     padding: 4px 6px 4px 16px;
@@ -4200,10 +4253,27 @@ aside.sticky-reading-sidebar .booking-card {
     text-align: left;
     width: 100%;
   }
-  .trail-flow-arrow {
-    display: none;
+@media (max-width: 540px) {
+  .telemetry-dashboard-grid,
+  .season-matrix-grid,
+  .gear-layer-grid,
+  .algorithm-steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-12) !important;
+  }
+  .telemetry-tile {
+    padding: var(--space-12) var(--space-16);
+  }
+  .quick-jump-bar {
+    padding: var(--space-8) var(--space-12);
+    gap: 6px;
+  }
+  .quick-jump-btn {
+    padding: 4px 10px;
+    font-size: 0.72rem;
+  }
+  .timeline-metrics-row {
+    flex-direction: column;
+    gap: 6px;
   }
 }
-
-
-
