@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Core Design Tokens & Component Styles -->
-  <link rel="stylesheet" href="/css/design-system.css?v=2.6">
-  <link rel="stylesheet" href="/css/components.css?v=2.6">
+  <link rel="stylesheet" href="/css/design-system.css?v=4.0">
+  <link rel="stylesheet" href="/css/components.css?v=4.0">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -160,7 +160,7 @@
 
 /* Dark Header Adaptation for Homepage Hero */
 .site-header.hero-header-dark {
-  background: rgba(8, 27, 58, 0.88);
+  background: rgba(6, 35, 25, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -172,7 +172,7 @@
 }
 
 .site-header.hero-header-dark .brand-tagline {
-  color: #F59E0B;
+  color: #059669;
 }
 
 .site-header.hero-header-dark .nav-link {
@@ -186,7 +186,7 @@
 
 .site-header.hero-header-dark .nav-link:hover,
 .site-header.hero-header-dark .nav-link.active {
-  color: #F59E0B;
+  color: #059669;
 }
 
 .site-header.hero-header-dark .nav-chevron {
@@ -198,9 +198,9 @@
   gap: 6px;
   padding: 0 12px;
   border-radius: 6px;
-  border: 1px solid rgba(245, 158, 11, 0.45);
-  background: rgba(245, 158, 11, 0.08);
-  color: #FBBF24;
+  border: 1px solid rgba(5, 150, 105, 0.45);
+  background: rgba(5, 150, 105, 0.12);
+  color: #34D399;
   font-family: var(--font-sans);
   font-size: 0.8125rem;
   font-weight: 600;
@@ -212,10 +212,10 @@
 }
 
 .btn-top-treks:hover {
-  background: #F59E0B;
-  color: #081B3A;
-  border-color: #F59E0B;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+  background: #059669;
+  color: #062319;
+  border-color: #059669;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
   transform: translateY(-1px);
 }
 
@@ -226,20 +226,20 @@
 
 .btn-top-treks:hover svg {
   transform: scale(1.1);
-  color: #081B3A !important;
+  color: #062319 !important;
 }
 
 /* White / Light Header Contrast Override */
 .site-header:not(.hero-header-dark) .btn-top-treks {
-  color: #B45309;
-  border-color: rgba(217, 119, 6, 0.45);
-  background: rgba(245, 158, 11, 0.06);
+  color: #047857;
+  border-color: rgba(5, 150, 105, 0.45);
+  background: rgba(5, 150, 105, 0.08);
 }
 
 .site-header:not(.hero-header-dark) .btn-top-treks:hover {
-  background: #F59E0B;
+  background: #059669;
   color: #FFFFFF;
-  border-color: #F59E0B;
+  border-color: #059669;
 }
 
 .site-header:not(.hero-header-dark) .btn-top-treks:hover svg {
@@ -291,19 +291,19 @@
 /* Primary CTA Button in Header */
 .header-actions .btn.btn-primary.btn-sm {
   padding: 0 16px;
-  background-color: var(--color-accent, #F97316);
-  border: 1px solid var(--color-accent, #F97316);
+  background-color: var(--color-accent, #059669);
+  border: 1px solid var(--color-accent, #059669);
   color: #FFFFFF;
   font-weight: 700;
   letter-spacing: 0.02em;
-  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.25);
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25);
 }
 
 .header-actions .btn.btn-primary.btn-sm:hover {
-  background-color: var(--color-accent-hover, #EA580C);
-  border-color: var(--color-accent-hover, #EA580C);
+  background-color: var(--color-accent-hover, #047857);
+  border-color: var(--color-accent-hover, #047857);
   color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.4);
   transform: translateY(-1px);
 }
 
@@ -315,7 +315,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #081B3A;
+  background-color: #062319;
   color: #FFFFFF;
   text-align: center;
   overflow: hidden;
@@ -331,7 +331,7 @@
   overflow: hidden;
   z-index: 1;
   pointer-events: none;
-  background-color: #081B3A;
+  background-color: #062319;
 }
 
 .hero-cinematic-bg {
@@ -367,12 +367,12 @@
   z-index: 2;
   background:
     linear-gradient(180deg, 
-      rgba(8, 27, 58, 0.52) 0%, 
-      rgba(8, 27, 58, 0.18) 18%, 
-      rgba(8, 27, 58, 0.04) 45%, 
-      rgba(8, 27, 58, 0.08) 65%, 
-      rgba(8, 27, 58, 0.35) 82%, 
-      rgba(8, 27, 58, 0.78) 100%
+      rgba(6, 35, 25, 0.52) 0%, 
+      rgba(6, 35, 25, 0.18) 18%, 
+      rgba(6, 35, 25, 0.04) 45%, 
+      rgba(6, 35, 25, 0.08) 65%, 
+      rgba(6, 35, 25, 0.35) 82%, 
+      rgba(6, 35, 25, 0.78) 100%
     );
   pointer-events: none;
 }
@@ -388,7 +388,7 @@
   gap: 8px;
   padding: 6px 14px;
   border-radius: 20px;
-  background: rgba(8, 27, 58, 0.65);
+  background: rgba(6, 35, 25, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -473,9 +473,9 @@
   gap: 8px;
   padding: 6px 18px;
   border-radius: 20px;
-  background: rgba(8, 27, 58, 0.72);
-  border: 1px solid rgba(245, 158, 11, 0.6);
-  color: #FBBF24;
+  background: rgba(6, 35, 25, 0.72);
+  border: 1px solid rgba(5, 150, 105, 0.5);
+  color: #34D399;
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 700;
@@ -539,7 +539,7 @@
 }
 
 .hero-search-bar:focus-within {
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(245, 158, 11, 0.55);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(5, 150, 105, 0.45);
   transform: translateY(-2px);
 }
 
@@ -582,7 +582,7 @@
 }
 
 .hero-search-submit-btn {
-  background: #081B3A;
+  background: #062319;
   color: #FFFFFF;
   font-family: var(--font-sans);
   font-weight: 700;
@@ -599,9 +599,9 @@
 }
 
 .hero-search-submit-btn:hover {
-  background: #F59E0B;
-  color: #081B3A;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+  background: #059669;
+  color: #062319;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4);
 }
 
 /* Autocomplete Dropdown List */
@@ -703,7 +703,7 @@
 
 .search-dropdown-item:hover .search-item-arrow {
   transform: translateX(3px);
-  color: #F59E0B;
+  color: #059669;
 }
 
 .search-no-results {
@@ -738,7 +738,7 @@
   gap: 6px;
   padding: 7px 16px;
   border-radius: 30px;
-  background: rgba(8, 27, 58, 0.62);
+  background: rgba(6, 35, 25, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.28);
   color: #FFFFFF;
   font-family: var(--font-sans);
@@ -753,9 +753,9 @@
 }
 
 .hero-pill:hover {
-  background: rgba(8, 27, 58, 0.85);
-  border-color: #F59E0B;
-  color: #FBBF24;
+  background: rgba(6, 35, 25, 0.85);
+  border-color: #059669;
+  color: #34D399;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
 }
@@ -765,7 +765,7 @@
   position: relative;
   z-index: 4;
   width: 100%;
-  background: rgba(8, 27, 58, 0.82);
+  background: rgba(6, 35, 25, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -793,20 +793,20 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.35);
+  background: rgba(5, 150, 105, 0.14);
+  border: 1px solid rgba(5, 150, 105, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #F59E0B;
+  color: #059669;
   flex-shrink: 0;
   transition: transform 0.25s ease;
 }
 
 .trust-pill-item:hover .trust-pill-icon {
   transform: scale(1.08);
-  background: rgba(245, 158, 11, 0.22);
-  border-color: #F59E0B;
+  background: rgba(5, 150, 105, 0.28);
+  border-color: #059669;
 }
 
 .trust-pill-content strong {
@@ -889,7 +889,7 @@
   flex-direction: column !important;
   justify-content: space-between !important;
   align-items: center !important;
-  background-color: #081B3A !important;
+  background-color: #062319 !important;
   color: #FFFFFF !important;
   text-align: center !important;
   overflow: hidden !important;
@@ -906,7 +906,7 @@
   overflow: hidden !important;
   z-index: 1 !important;
   pointer-events: none !important;
-  background-color: #081B3A !important;
+  background-color: #062319 !important;
 }
 .hero-cinematic-bg {
   position: absolute !important;
@@ -938,12 +938,12 @@
   inset: 0 !important;
   z-index: 2 !important;
   background: linear-gradient(180deg, 
-    rgba(8, 27, 58, 0.52) 0%, 
-    rgba(8, 27, 58, 0.18) 18%, 
-    rgba(8, 27, 58, 0.04) 45%, 
-    rgba(8, 27, 58, 0.08) 65%, 
-    rgba(8, 27, 58, 0.35) 82%, 
-    rgba(8, 27, 58, 0.78) 100%
+    rgba(6, 35, 25, 0.52) 0%, 
+    rgba(6, 35, 25, 0.18) 18%, 
+    rgba(6, 35, 25, 0.04) 45%, 
+    rgba(6, 35, 25, 0.08) 65%, 
+    rgba(6, 35, 25, 0.35) 82%, 
+    rgba(6, 35, 25, 0.78) 100%
   ) !important;
   pointer-events: none !important;
 }
@@ -962,7 +962,7 @@
   position: relative !important;
   z-index: 4 !important;
   width: 100% !important;
-  background: rgba(8, 27, 58, 0.85) !important;
+  background: rgba(6, 35, 25, 0.85) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
@@ -1121,7 +1121,7 @@
         <!-- Header Actions: Top Treks, WhatsApp & Plan Trip -->
         <div class="header-actions">
           <a href="/treks" class="btn-top-treks" aria-label="Browse Top 18 Annapurna Treks">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: middle; color: #F59E0B;"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: middle; color: #059669;"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
             <span>Top Treks</span>
           </a>
           <a href="https://wa.me/9779818188459" class="header-whatsapp-pill" target="_blank" rel="noopener noreferrer" aria-label="Direct WhatsApp Concierge" title="Direct WhatsApp: +977 9818188459">
@@ -1217,14 +1217,14 @@
       </p>
 
       <!-- Social Proof Google Rating Badge (Without Link) -->
-      <div class="hero-google-rating" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(8, 27, 58, 0.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 9999px; padding: 6px 16px; margin: 0 auto 20px auto;">
+      <div class="hero-google-rating" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(6, 35, 25, 0.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 9999px; padding: 6px 16px; margin: 0 auto 20px auto;">
         <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink: 0;">
           <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
           <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
           <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
           <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
         </svg>
-        <span style="color: #F59E0B; font-size: 0.9375rem; letter-spacing: 1px;">★★★★★</span>
+        <span style="color: #059669; font-size: 0.9375rem; letter-spacing: 1px;">★★★★★</span>
         <span style="color: #FFFFFF; font-weight: 700; font-size: 0.8125rem;">5.0</span>
         <span style="color: rgba(255, 255, 255, 0.85); font-size: 0.8125rem;">Google Rating &bull; Verified Reviews</span>
       </div>
@@ -1248,7 +1248,7 @@
       <div class="hero-quick-pills">
         <span class="pills-label">Trending Routes:</span>
         <a href="/treks/annapurna-base-camp-classic-10-days" class="hero-pill">10-Day Classic Sanctuary</a>
-        <a href="/treks/annapurna-circuit-trek" class="hero-pill">Annapurna Circuit</a>
+        <a href="/treks/14-days-annapurna-circuit-trek" class="hero-pill">14-Day Annapurna Circuit</a>
         <a href="/treks/ghorepani-poon-hill-trek" class="hero-pill">Poon Hill Sunrise</a>
         <a href="/treks/mardi-himal-trek" class="hero-pill">Mardi Himal Ridge</a>
       </div>
@@ -1410,6 +1410,33 @@
           </div>
         </div>
 
+        <!-- Route 4: 14-Day Annapurna Circuit (Flagship Horseshoe) -->
+        <div class="blog-card" style="border: 2px solid var(--color-accent);">
+          <div style="position: relative;">
+            <img src="/images/thorong-la-pass-5416m.jpg" alt="14-Day Annapurna Circuit Trek over Thorong La Pass" class="blog-card-image">
+            <span style="position: absolute; top: 12px; right: 12px; background-color: var(--color-accent); color: #FFFFFF; font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: var(--radius-xs); letter-spacing: 0.08em;">
+              High Pass Flagship
+            </span>
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta-row">
+              <span class="badge-telemetry">14 Days / 13 Nights</span>
+              <span class="badge-telemetry">Max Alt: 5,416m</span>
+            </div>
+            <h3 class="blog-card-title">14 Days Annapurna Circuit Trek – The Classic Horseshoe</h3>
+            <p class="blog-card-excerpt">
+              The ultimate trans-Himalayan crossing. Conquer 5,416m Thorong La Pass, explore ancient Manang and sacred Muktinath, and finish with sunrise at Poon Hill.
+            </p>
+            <div style="margin-top: auto; padding-top: var(--space-16); border-top: 1px solid var(--color-border-subtle); display: flex; align-items: center; justify-content: space-between;">
+              <div>
+                <span style="font-size: var(--text-caption); color: var(--color-text-muted); display: block;">All-Inclusive Package</span>
+                <span style="font-family: var(--font-sans); font-size: 1.25rem; font-weight: 800; color: var(--color-brand-dark);">$755 – $1,099 <span style="font-size: var(--text-caption); font-weight: normal;">USD</span></span>
+              </div>
+              <a href="/treks/14-days-annapurna-circuit-trek" class="btn btn-primary btn-sm">View Expedition &rarr;</a>
+            </div>
+          </div>
+        </div>
+
         <!-- Route 3: 12-Day via Poon Hill -->
         <div class="blog-card">
           <div style="position: relative;">
@@ -1461,34 +1488,34 @@
           <svg viewBox="0 0 1000 200" width="100%" height="100%" preserveAspectRatio="none">
             <defs>
               <linearGradient id="elevationGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#F97316" stop-opacity="0.3"/>
-                <stop offset="100%" stop-color="#0F2D5C" stop-opacity="0.02"/>
+                <stop offset="0%" stop-color="#059669" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#0B3B29" stop-opacity="0.02"/>
               </linearGradient>
             </defs>
             <path d="M 0,185 L 120,160 L 250,135 L 380,115 L 500,85 L 650,50 L 800,20 L 900,90 L 1000,175 L 1000,200 L 0,200 Z" fill="url(#elevationGradient)"/>
-            <path d="M 0,185 L 120,160 L 250,135 L 380,115 L 500,85 L 650,50 L 800,20 L 900,90 L 1000,175" fill="none" stroke="#0F2D5C" stroke-width="3" stroke-linecap="round"/>
+            <path d="M 0,185 L 120,160 L 250,135 L 380,115 L 500,85 L 650,50 L 800,20 L 900,90 L 1000,175" fill="none" stroke="#0B3B29" stroke-width="3" stroke-linecap="round"/>
             
             <circle cx="0" cy="185" r="5" fill="#059669"/>
-            <text x="10" y="180" font-family="Poppins" font-size="11" font-weight="700" fill="#0F2D5C">Pokhara (820m)</text>
+            <text x="10" y="180" font-family="Poppins" font-size="11" font-weight="700" fill="#0B3B29">Pokhara (820m)</text>
             
             <circle cx="250" cy="135" r="5" fill="#0284C7"/>
-            <text x="260" y="130" font-family="Poppins" font-size="11" font-weight="700" fill="#0F2D5C">Ulleri (1,960m)</text>
+            <text x="260" y="130" font-family="Poppins" font-size="11" font-weight="700" fill="#0B3B29">Ulleri (1,960m)</text>
             
             <circle cx="500" cy="85" r="5" fill="#0284C7"/>
-            <text x="510" y="80" font-family="Poppins" font-size="11" font-weight="700" fill="#0F2D5C">Chhomrong (2,170m)</text>
+            <text x="510" y="80" font-family="Poppins" font-size="11" font-weight="700" fill="#0B3B29">Chhomrong (2,170m)</text>
             
-            <circle cx="650" cy="50" r="5" fill="#D97706"/>
-            <text x="660" y="45" font-family="Poppins" font-size="11" font-weight="700" fill="#D97706">MBC (3,700m)</text>
+            <circle cx="650" cy="50" r="5" fill="#059669"/>
+            <text x="660" y="45" font-family="Poppins" font-size="11" font-weight="700" fill="#059669">MBC (3,700m)</text>
             
-            <circle cx="800" cy="20" r="7" fill="#F97316"/>
-            <text x="730" y="15" font-family="Poppins" font-size="12" font-weight="800" fill="#F97316">ABC Base Camp (4,130m)</text>
+            <circle cx="800" cy="20" r="7" fill="#059669"/>
+            <text x="730" y="15" font-family="Poppins" font-size="12" font-weight="800" fill="#059669">ABC Base Camp (4,130m)</text>
           </svg>
         </div>
 
         <div class="elevation-legend">
           <span><span class="legend-dot green"></span> Subtropical Valleys (&lt; 2,000m)</span>
           <span><span class="legend-dot blue"></span> Rhododendron Forest Threshold (2,000m – 3,000m)</span>
-          <span><span class="legend-dot orange"></span> High Sanctuary Approach (3,000m – 4,000m)</span>
+          <span><span class="legend-dot" style="background:#059669;"></span> High Sanctuary Approach (3,000m – 4,000m)</span>
           <span><span class="legend-dot red"></span> Base Camp Amphitheater (4,130m)</span>
         </div>
       </div>
@@ -1499,7 +1526,7 @@
   <section class="section section-dark" id="safety">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow" style="color: #FDBA74;">Medical & Evacuation Leadership</span>
+        <span class="eyebrow" style="color: #A7F3D0;">Medical & Evacuation Leadership</span>
         <h2 class="section-title">The Highest Altitude Safety Standard on Trail</h2>
         <p class="section-subtitle">
           High-altitude trekking requires clinical discipline, not guesswork. Here is how our team protects your health every single day.
@@ -1554,7 +1581,7 @@
             <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
           </svg>
           <span style="font-weight: 700; color: var(--color-brand-dark); font-size: 0.9375rem;">5.0 / 5.0 Rating</span>
-          <span style="color: #F59E0B; letter-spacing: 1.5px; font-size: 1rem;">★★★★★</span>
+          <span style="color: #059669; letter-spacing: 1.5px; font-size: 1rem;">★★★★★</span>
           <span style="color: var(--color-text-muted); font-size: 0.8125rem;">(Top Rated on Google Reviews)</span>
         </div>
         <p class="section-subtitle">
@@ -1804,6 +1831,7 @@
             <label class="form-label" for="routeSelect">Select Your Route Variation *</label>
             <select id="routeSelect" class="form-select" name="route" required>
               <option value="10-day-classic">Annapurna Base Camp Classic (10 Days - Flagship)</option>
+              <option value="14-day-circuit">14 Days Annapurna Circuit Trek (Horseshoe Loop - 5,416m)</option>
               <option value="7-day-express">Annapurna Base Camp Express (7 Days - Fast Hiker)</option>
               <option value="12-day-poonhill">Annapurna Base Camp via Poon Hill (12 Days - Scenic)</option>
               <option value="custom-private">Private Custom Departure (Tailor-Made)</option>
@@ -1883,7 +1911,7 @@
             <div>
               <div style="display: flex; align-items: center; gap: 6px; line-height: 1.2;">
                 <span style="font-weight: 700; color: #FFFFFF; font-size: 0.875rem;">5.0 / 5.0 Google Rating</span>
-                <span style="color: #F59E0B; font-size: 0.8125rem; letter-spacing: 1px;">★★★★★</span>
+                <span style="color: #059669; font-size: 0.8125rem; letter-spacing: 1px;">★★★★★</span>
               </div>
               <div style="font-size: 0.6875rem; color: #94A3B8; margin-top: 2px;">Verified Trekker Reviews</div>
             </div>
@@ -2262,7 +2290,7 @@
         searchDropdown.innerHTML = `
           <div class="search-no-results">
             <p>No routes found matching "<strong>${escapeHtml(searchInput.value)}</strong>".</p>
-            <a href="/treks" style="color: #F59E0B; font-weight: 700; text-decoration: none; margin-top: 6px; display: inline-block;">
+            <a href="/treks" style="color: #059669; font-weight: 700; text-decoration: none; margin-top: 6px; display: inline-block;">
               Browse all 18 Annapurna expeditions &rarr;
             </a>
           </div>
@@ -2294,7 +2322,7 @@
 
       html += `
         <div style="padding: 8px 20px; background: #F8FAFC; border-top: 1px solid #F1F5F9; text-align: center;">
-          <a href="/treks" style="font-size: 0.75rem; font-weight: 700; color: #081B3A; text-decoration: none;">
+          <a href="/treks" style="font-size: 0.75rem; font-weight: 700; color: #062319; text-decoration: none;">
             View Complete 18-Trek Directory &rarr;
           </a>
         </div>
