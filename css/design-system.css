@@ -9,19 +9,19 @@
 
 /* --- 1. DESIGN TOKENS & CSS CUSTOM PROPERTIES --- */
 :root {
-  /* Core Brand Colors */
+  /* Core Brand Colors - Alpine Forest & Mountain Emerald System */
   --color-bg: #FFFFFF;
-  --color-brand-dark: #0F2D5C;
-  --color-brand-dark-deep: #081B3A;
-  --color-brand-dark-surface: #143870;
-  --color-brand-dark-tint: #EEF4FA;
+  --color-brand-dark: #0B3B29;
+  --color-brand-dark-deep: #062319;
+  --color-brand-dark-surface: #134E37;
+  --color-brand-dark-tint: #F0FDF4;
   
-  /* Primary Action / Kinetic Accent */
-  --color-accent: #F97316;
-  --color-accent-hover: #EA580C;
-  --color-accent-active: #C2410C;
-  --color-accent-subtle: #FFF7ED;
-  --color-accent-border: #FDBA74;
+  /* Primary Action / Kinetic Accent - Mountain Emerald */
+  --color-accent: #059669;
+  --color-accent-hover: #047857;
+  --color-accent-active: #065F46;
+  --color-accent-subtle: #ECFDF5;
+  --color-accent-border: #A7F3D0;
 
   /* Editorial Neutrals & Slate Hierarchy */
   --color-surface-pure: #FFFFFF;
@@ -31,10 +31,10 @@
   
   --color-border-subtle: #E2E8F0;
   --color-border-medium: #CBD5E1;
-  --color-border-dark: #0F2D5C;
+  --color-border-dark: #0B3B29;
 
   /* Typography Colors */
-  --color-text-headline: #0F2D5C;
+  --color-text-headline: #0B3B29;
   --color-text-body: #1E293B;
   --color-text-muted: #475569;
   --color-text-light: #64748B;
@@ -123,12 +123,13 @@
   --radius-xl: 12px;
   --radius-full: 9999px; /* Reserved exclusively for small status dots and telemetry badges */
 
-  /* Shadows (Subtle, Atmospheric, Non-Muddy) */
-  --shadow-subtle: 0 1px 3px rgba(15, 45, 92, 0.05);
-  --shadow-card: 0 4px 16px -2px rgba(15, 45, 92, 0.06), 0 2px 6px -1px rgba(15, 45, 92, 0.03);
-  --shadow-elevated: 0 12px 32px -4px rgba(15, 45, 92, 0.10), 0 4px 12px -2px rgba(15, 45, 92, 0.05);
-  --shadow-modal: 0 24px 60px -8px rgba(15, 45, 92, 0.22);
-  --shadow-glow-orange: 0 4px 18px rgba(249, 115, 22, 0.28);
+  /* Shadows (Subtle, Atmospheric, Non-Muddy Alpine Green) */
+  --shadow-subtle: 0 1px 3px rgba(11, 59, 41, 0.05);
+  --shadow-card: 0 4px 16px -2px rgba(11, 59, 41, 0.06), 0 2px 6px -1px rgba(11, 59, 41, 0.03);
+  --shadow-elevated: 0 12px 32px -4px rgba(11, 59, 41, 0.10), 0 4px 12px -2px rgba(11, 59, 41, 0.05);
+  --shadow-modal: 0 24px 60px -8px rgba(11, 59, 41, 0.22);
+  --shadow-glow-emerald: 0 4px 18px rgba(5, 150, 105, 0.28);
+  --shadow-glow-orange: var(--shadow-glow-emerald); /* backward compatibility alias */
   /* Semantic Shadow Aliases */
   --shadow-sm: var(--shadow-subtle);
   --shadow-md: var(--shadow-card);
@@ -401,4 +402,4 @@ img, picture, video, canvas, svg {
 
 /* High contrast footer links fallback */
 .site-footer a { color: #CBD5E1; }
-.site-footer a:hover { color: #F97316; }
+.site-footer a:hover { color: var(--color-accent); }
