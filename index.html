@@ -158,49 +158,66 @@
 }
 
 
-/* Dark Header Adaptation for Homepage Hero */
+/* White Header System with Black Typography */
+.site-header,
 .site-header.hero-header-dark {
-  background: rgba(6, 35, 25, 0.88);
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all var(--transition-normal, 0.3s ease);
 }
 
+.site-header .brand-name,
 .site-header.hero-header-dark .brand-name {
-  color: #FFFFFF;
+  color: #0F172A !important;
+  font-weight: 800;
 }
 
+.site-header .brand-tagline,
 .site-header.hero-header-dark .brand-tagline {
-  color: #059669;
+  color: #059669 !important;
+  font-weight: 700;
 }
 
+.site-header .nav-link,
 .site-header.hero-header-dark .nav-link {
-  color: #F1F5F9;
-  font-weight: 600;
+  color: #0F172A !important;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8125rem;
   letter-spacing: 0.04em;
   padding: 8px 4px;
 }
 
+.site-header .nav-link:hover,
+.site-header .nav-link.active,
 .site-header.hero-header-dark .nav-link:hover,
 .site-header.hero-header-dark .nav-link.active {
-  color: #059669;
+  color: #059669 !important;
 }
 
+.site-header .nav-chevron,
 .site-header.hero-header-dark .nav-chevron {
   stroke: currentColor;
+  color: #0F172A !important;
 }
 
-/* Highlighted "Top Treks" Header Button */
+.site-header .nav-item:hover .nav-chevron,
+.site-header.hero-header-dark .nav-item:hover .nav-chevron {
+  color: #059669 !important;
+}
+
+/* Highlighted "Top Treks" Header Button (Crisp on White) */
 .btn-top-treks {
   gap: 6px;
   padding: 0 12px;
   border-radius: 6px;
-  border: 1px solid rgba(5, 150, 105, 0.45);
-  background: rgba(5, 150, 105, 0.12);
-  color: #34D399;
+  border: 1px solid rgba(5, 150, 105, 0.35);
+  background: rgba(5, 150, 105, 0.08);
+  color: #047857;
   font-family: var(--font-sans);
   font-size: 0.8125rem;
   font-weight: 600;
@@ -213,7 +230,7 @@
 
 .btn-top-treks:hover {
   background: #059669;
-  color: #062319;
+  color: #FFFFFF !important;
   border-color: #059669;
   box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
   transform: translateY(-1px);
@@ -221,24 +238,24 @@
 
 .btn-top-treks svg {
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  color: #059669 !important;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .btn-top-treks:hover svg {
   transform: scale(1.1);
-  color: #062319 !important;
+  color: #FFFFFF !important;
 }
 
-/* White / Light Header Contrast Override */
 .site-header:not(.hero-header-dark) .btn-top-treks {
   color: #047857;
-  border-color: rgba(5, 150, 105, 0.45);
+  border-color: rgba(5, 150, 105, 0.35);
   background: rgba(5, 150, 105, 0.08);
 }
 
 .site-header:not(.hero-header-dark) .btn-top-treks:hover {
   background: #059669;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   border-color: #059669;
 }
 
@@ -246,14 +263,14 @@
   color: #FFFFFF !important;
 }
 
-/* Header Direct WhatsApp Contact Pill */
+/* Header Direct WhatsApp Contact Pill (Crisp on White) */
 .header-whatsapp-pill {
   gap: 6px;
   padding: 0 12px;
   border-radius: 6px;
-  background: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(74, 222, 128, 0.35);
-  color: #4ADE80;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #15803D;
   font-family: var(--font-sans);
   font-size: 0.8125rem;
   font-weight: 600;
@@ -264,28 +281,27 @@
 }
 
 .header-whatsapp-pill:hover {
-  background: rgba(34, 197, 94, 0.25);
-  border-color: #4ADE80;
-  color: #FFFFFF;
+  background: #16A34A;
+  border-color: #16A34A;
+  color: #FFFFFF !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.25);
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25);
 }
 
 .header-whatsapp-pill svg {
   flex-shrink: 0;
 }
 
-/* White / Light Header Contrast Override */
 .site-header:not(.hero-header-dark) .header-whatsapp-pill {
   color: #15803D;
-  border-color: rgba(34, 197, 94, 0.45);
+  border-color: rgba(34, 197, 94, 0.4);
   background: rgba(34, 197, 94, 0.08);
 }
 
 .site-header:not(.hero-header-dark) .header-whatsapp-pill:hover {
-  background: #22C55E;
-  color: #FFFFFF;
-  border-color: #22C55E;
+  background: #16A34A;
+  color: #FFFFFF !important;
+  border-color: #16A34A;
 }
 
 /* Primary CTA Button in Header */
@@ -995,7 +1011,7 @@
   </div>
 
   <!-- Global Header with Structured Dropdowns -->
-  <header class="site-header hero-header-dark" id="mainHeader">
+  <header class="site-header" id="mainHeader">
     <div class="container">
       <div class="header-inner">
         <!-- Brand Logo -->
